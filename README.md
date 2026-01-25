@@ -1,92 +1,91 @@
-# 🔮 AI 塔羅牌占卜（Tarot GPT App）
 
-本專案為一款結合 Streamlit 介面與 OpenAI GPT API 的 AI 塔羅牌占卜應用，支援中文問題輸入、隨機抽三張大阿爾克那塔羅牌，並透過 GPT 生成深度解讀。
+# AI Tarot MVP — Streamlit-based LLM Application Demo
 
-## 📦 專案內容
+This repository presents an AI application MVP demo illustrating how large language models (LLMs) can be combined with structured domain knowledge to build an interactive prototype.
 
-- 使用者輸入問題
-- 隨機抽三張塔羅牌（含正位/逆位）
-- 顯示牌面圖像與解釋
-- 由 GPT 給出完整中文占卜分析
-- MVP 支援本地圖片、JSON 牌義檔讀取
+The project focuses on AI application design, prompt orchestration, and rapid prototyping, rather than commercial product development or backend deployment.
 
 ---
 
-## 🚀 安裝與執行方式
+The AI Tarot MVP explores how symbolic knowledge (Tarot cards) can be represented as structured data and interpreted dynamically using LLMs.
 
-### 🔧 1. 安裝依賴套件（建議建立虛擬環境）
+The purpose of this project is to demonstrate:
+
+* Building an interactive AI application with Streamlit
+* Integrating structured JSON data into LLM-based reasoning
+* Designing prompts for multi-step interpretation
+* Rapidly prototyping an AI MVP without API service refactoring
+
+This project is positioned as a course project and portfolio-level AI application demo.
+
+---
+
+The demo includes:
+
+* An interactive Tarot card selection interface
+* LLM-generated interpretations guided by structured Tarot knowledge
+* Support for both Major and Minor Arcana
+* JSON-based separation of data and logic
+* A Streamlit-based UI for fast experimentation and presentation
+
+---
+
+Repository contents:
+
+```
+app.py                          Streamlit application entry point
+Demo_Tarot_streamlit.ipynb      Runnable demo notebook (Colab / local)
+tarot_cards.json                Major Arcana structured data
+tarot_minor_arcana_final_56.json
+cards/                          Tarot card image assets
+requirements.txt
+```
+
+---
+
+To run the demo locally:
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-或手動安裝：
+Set the OpenAI API key (for local demo only):
 
 ```bash
-pip install streamlit openai python-dotenv Pillow
+export OPENAI_API_KEY="your_api_key_here"
 ```
 
-### 🔑 2. 設定 OpenAI API 金鑰
-
-在專案根目錄建立 `.env` 檔案，內容如下：
-
-```
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
-
-（請替換為您的實際 API 金鑰）
-
-### 📂 3. 專案結構
-
-```
-tarot_mvp/
-├── app.py
-├── tarot_cards.json
-├── cards/                # 儲存塔羅牌圖片（檔名需為 RWS1909_-_XX_Name.jpeg）
-├── requirements.txt
-└── .env
-```
-
-### ▶️ 4. 執行方式（本機）
+Run the Streamlit application:
 
 ```bash
 streamlit run app.py
 ```
 
-若成功執行，預設網址會為：
-
-```
-http://localhost:8501
-```
+API configuration is required only for execution.
+The project structure and logic can be reviewed independently without running the model.
 
 ---
 
-## 📖 JSON 格式（tarot_cards.json）
+All Tarot knowledge is stored in structured JSON format, separating card metadata, symbolic meanings, and upright or reversed interpretations.
 
-```json
-[
-  {
-    "name": "愚者",
-    "filename": "RWS1909_-_00_Fool.jpeg",
-    "upright": "新的開始、自由、冒險。",
-    "reversed": "魯莽、逃避現實、缺乏準備。"
-  },
-  ...
-]
-```
+This design keeps AI logic decoupled from domain knowledge and allows the project to be easily extended to other symbolic or knowledge-driven applications.
 
 ---
 
-## 🌟 未來可擴充方向
+No backend API refactor (FastAPI / Flask) was performed intentionally.
+The project is treated as an MVP demo, focusing on AI application logic rather than deployment infrastructure.
 
-- 支援占卜分類（愛情、事業、健康）
-- 回應語氣客製化（MBTI、星座、人格偏好、八字、解夢）
-- 使用者占卜紀錄與分析
-- 加入繁中→GPT prompt 最佳化設計
+Streamlit was selected to prioritize clarity, speed, and iteration efficiency.
+Tarot images are included solely for UI completeness and demonstration purposes.
 
 ---
 
-## 🧙‍♀️ 作者
+This project is not intended as a production system or predictive model.
+It serves as an educational and demonstrative AI application prototype.
 
-由Cindy Wang(進化版的貓貓蟲)發想與開發  
-塔羅圖像使用 Rider-Waite 1909 公版版本。
+---
+
+Developed by **Cindy Wang**
+Computer Science / AI Application Project
