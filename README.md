@@ -1,6 +1,8 @@
 
 # AI Tarot MVP — Streamlit-based LLM Application Demo
 
+🎥 Demo video (full interaction walkthrough): https://youtu.be/SkfL9ziMDfk
+
 This repository presents an AI application MVP demo illustrating how large language models (LLMs) can be combined with structured domain knowledge to build an interactive prototype.
 
 The project focuses on AI application design, prompt orchestration, and rapid prototyping, rather than commercial product development or backend deployment.
