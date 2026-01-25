@@ -1,0 +1,332 @@
+[
+  {
+    "name": "聖杯1",
+    "image": "cards/RWS1909_-_Cups_01.jpeg",
+    "meaning_up": "情感的開始、愛與喜悅。",
+    "meaning_rev": "情感壓抑、失落、關係停滯。"
+  },
+  {
+    "name": "聖杯2",
+    "image": "cards/RWS1909_-_Cups_02.jpeg",
+    "meaning_up": "聯合、夥伴關係、感情交流。",
+    "meaning_rev": "分歧、誤會、不對等的關係。"
+  },
+  {
+    "name": "聖杯3",
+    "image": "cards/RWS1909_-_Cups_03.jpeg",
+    "meaning_up": "情感交流擴展、共享喜悅、社交圈凝聚",
+    "meaning_rev": "過度依附他人、虛假和諧、情緒流於表面"
+  },
+  {
+    "name": "聖杯4",
+    "image": "cards/RWS1909_-_Cups_04.jpeg",
+    "meaning_up": "情緒退縮、缺乏動力、對現況感到無趣",
+    "meaning_rev": "情緒冷漠轉變、關注內在聲音、準備迎接轉變"
+  },
+  {
+    "name": "聖杯5",
+    "image": "cards/RWS1909_-_Cups_05.jpeg",
+    "meaning_up": "失落感浮現、對過去感到懊悔、難以釋懷",
+    "meaning_rev": "悲傷逐漸釋放、情感重新整合、回顧中看見剩餘"
+  },
+  {
+    "name": "聖杯6",
+    "image": "cards/RWS1909_-_Cups_06.jpeg",
+    "meaning_up": "過去連結、童年記憶、情感懷舊",
+    "meaning_rev": "沉溺回憶、停滯不前、情感不成熟"
+  },
+  {
+    "name": "聖杯7",
+    "image": "cards/RWS1909_-_Cups_07.jpeg",
+    "meaning_up": "幻想過多、選擇混亂、情感投射",
+    "meaning_rev": "看清現實、情緒收斂、開始聚焦方向"
+  },
+  {
+    "name": "聖杯8",
+    "image": "cards/RWS1909_-_Cups_08.jpeg",
+    "meaning_up": "主動抽離、轉身離開、尋求更深層意義",
+    "meaning_rev": "情緒困住、難以放手、壓抑的轉變需求"
+  },
+  {
+    "name": "聖杯9",
+    "image": "cards/RWS1909_-_Cups_09.jpeg",
+    "meaning_up": "心願滿足、內在圓滿、享受當下成果",
+    "meaning_rev": "滿足表象化、自我沉迷、忽視他人需求"
+  },
+  {
+    "name": "聖杯10",
+    "image": "cards/RWS1909_-_Cups_10.jpeg",
+    "meaning_up": "情感圓滿、關係和諧、家族共融",
+    "meaning_rev": "表面和諧、情感依賴、情緒過度理想化"
+  },
+  {
+    "name": "聖杯11",
+    "image": "cards/RWS1909_-_Cups_11.jpeg",
+    "meaning_up": "情感覺醒、靈感湧現、內心溫柔細膩",
+    "meaning_rev": "情緒過敏、逃避現實、缺乏情緒界線"
+  },
+  {
+    "name": "聖杯12",
+    "image": "cards/RWS1909_-_Cups_12.jpeg",
+    "meaning_up": "溫柔追求、浪漫行動、情感主導決策",
+    "meaning_rev": "情緒搖擺、幻想過多、難以付諸實際"
+  },
+  {
+    "name": "聖杯13",
+    "image": "cards/RWS1909_-_Cups_13.jpeg",
+    "meaning_up": "情感豐沛、深具共感力、療癒氛圍濃厚",
+    "meaning_rev": "情緒勒索、過度吸納他人情緒、難以劃界"
+  },
+  {
+    "name": "聖杯14",
+    "image": "cards/RWS1909_-_Cups_14.jpeg",
+    "meaning_up": "內斂成熟、情緒穩重、善於理解與承接",
+    "meaning_rev": "情緒壓抑、逃避表達、難以建立親密"
+  },
+  {
+    "name": "錢幣1",
+    "image": "cards/RWS1909_-_Pentacles_01.jpeg",
+    "meaning_up": "穩定機會、物質基礎啟動、安全感萌芽",
+    "meaning_rev": "感覺停滯、資源未運用、對進展缺乏耐性"
+  },
+  {
+    "name": "錢幣2",
+    "image": "cards/RWS1909_-_Pentacles_02.jpeg",
+    "meaning_up": "資源調配、靈活應對現實、不斷平衡生活",
+    "meaning_rev": "多重壓力失衡、過度應對造成混亂"
+  },
+  {
+    "name": "錢幣3",
+    "image": "cards/RWS1909_-_Pentacles_03.jpeg",
+    "meaning_up": "技能合作、價值建構、學習成長",
+    "meaning_rev": "合作停滯、自我懷疑、無法展現價值"
+  },
+  {
+    "name": "錢幣4",
+    "image": "cards/RWS1909_-_Pentacles_04.jpeg",
+    "meaning_up": "控制資源、保護所有、固守現狀",
+    "meaning_rev": "過度執著、封閉守財、安全感過度依賴"
+  },
+  {
+    "name": "錢幣5",
+    "image": "cards/RWS1909_-_Pentacles_05.jpeg",
+    "meaning_up": "物質匱乏、孤單無助、支持缺席",
+    "meaning_rev": "轉向內在支持、逆境中學會接納協助"
+  },
+  {
+    "name": "錢幣6",
+    "image": "cards/RWS1909_-_Pentacles_06.jpeg",
+    "meaning_up": "資源流動、施與受平衡、價值交換",
+    "meaning_rev": "不對等關係、付出失衡、過度依賴他人"
+  },
+  {
+    "name": "錢幣7",
+    "image": "cards/RWS1909_-_Pentacles_07.jpeg",
+    "meaning_up": "等待結果、階段評估、慢工出細活",
+    "meaning_rev": "缺乏耐性、對進度不滿、努力感到枯竭"
+  },
+  {
+    "name": "錢幣8",
+    "image": "cards/RWS1909_-_Pentacles_08.jpeg",
+    "meaning_up": "專注投入、持續學習、技術精進",
+    "meaning_rev": "學習疲乏、精力耗盡、對目標失焦"
+  },
+  {
+    "name": "錢幣9",
+    "image": "cards/RWS1909_-_Pentacles_09.jpeg",
+    "meaning_up": "獨立成就、享受成果、自我價值確認",
+    "meaning_rev": "外在豐盛但內心空虛、過度依賴物質"
+  },
+  {
+    "name": "錢幣10",
+    "image": "cards/RWS1909_-_Pentacles_10.jpeg",
+    "meaning_up": "家族資產、長期穩定、傳承與成果累積",
+    "meaning_rev": "價值觀衝突、家族壓力、無法感受歸屬"
+  },
+  {
+    "name": "錢幣11",
+    "image": "cards/RWS1909_-_Pentacles_11.jpeg",
+    "meaning_up": "實際入門、務實學習、價值逐步建立",
+    "meaning_rev": "拖延觀望、缺乏主動、忽略基本責任"
+  },
+  {
+    "name": "錢幣12",
+    "image": "cards/RWS1909_-_Pentacles_12.jpeg",
+    "meaning_up": "持之以恆、腳踏實地、穩健投入",
+    "meaning_rev": "固守既有方式、效率低落、缺乏彈性"
+  },
+  {
+    "name": "錢幣13",
+    "image": "cards/RWS1909_-_Pentacles_13.jpeg",
+    "meaning_up": "實際照料、資源管理、創造舒適與穩定",
+    "meaning_rev": "過度照顧他人、忽略自身需求、情感與金錢混淆"
+  },
+  {
+    "name": "錢幣14",
+    "image": "cards/RWS1909_-_Pentacles_14.jpeg",
+    "meaning_up": "財務穩固、善於管理、重視長期建設",
+    "meaning_rev": "物質過度執著、壓抑情感、控制慾過強"
+  },
+  {
+    "name": "寶劍1",
+    "image": "cards/RWS1909_-_Swords_01.jpeg",
+    "meaning_up": "決斷出現、真理揭示、清晰思維",
+    "meaning_rev": "意識混亂、判斷偏差、理性短路"
+  },
+  {
+    "name": "寶劍2",
+    "image": "cards/RWS1909_-_Swords_02.jpeg",
+    "meaning_up": "內外平衡、理性與直覺拉鋸、選擇中立",
+    "meaning_rev": "決策卡住、信息遮蔽、過於理智無感"
+  },
+  {
+    "name": "寶劍3",
+    "image": "cards/RWS1909_-_Swords_03.jpeg",
+    "meaning_up": "心碎刺痛、情感創傷、真相令人痛苦",
+    "meaning_rev": "創傷療癒中、內在仍受影響、情緒未解"
+  },
+  {
+    "name": "寶劍4",
+    "image": "cards/RWS1909_-_Swords_04.jpeg",
+    "meaning_up": "靜止休息、內在沉澱、暫時抽離",
+    "meaning_rev": "無法休息、心思過度、身心緊繃"
+  },
+  {
+    "name": "寶劍5",
+    "image": "cards/RWS1909_-_Swords_05.jpeg",
+    "meaning_up": "輸贏之爭、自利衝突、不計代價的勝利",
+    "meaning_rev": "勝利不安、關係疏離、自我質疑"
+  },
+  {
+    "name": "寶劍6",
+    "image": "cards/RWS1909_-_Swords_06.jpeg",
+    "meaning_up": "脫離混亂、過渡時期、尋求內在平靜",
+    "meaning_rev": "拖延轉變、逃避現實、陷入無方向的漂浮"
+  },
+  {
+    "name": "寶劍7",
+    "image": "cards/RWS1909_-_Swords_07.jpeg",
+    "meaning_up": "心懷鬼胎、秘密行動、策略隱藏",
+    "meaning_rev": "計謀失敗、謊言揭露、自我欺瞞"
+  },
+  {
+    "name": "寶劍8",
+    "image": "cards/RWS1909_-_Swords_08.jpeg",
+    "meaning_up": "受困焦慮、思維綁架、感覺被困住",
+    "meaning_rev": "限制開始鬆動、思維突破口出現、內在鬆綁"
+  },
+  {
+    "name": "寶劍9",
+    "image": "cards/RWS1909_-_Swords_09.jpeg",
+    "meaning_up": "深夜焦慮、無法入眠、自我折磨",
+    "meaning_rev": "恐懼開始釋放、內在呼救、焦慮接近轉化"
+  },
+  {
+    "name": "寶劍11",
+    "image": "cards/RWS1909_-_Swords_11.jpeg",
+    "meaning_up": "觀察敏銳、思維活躍、資訊探索者",
+    "meaning_rev": "過度好奇、話語衝動、言語造成誤傷"
+  },
+  {
+    "name": "寶劍12",
+    "image": "cards/RWS1909_-_Swords_12.jpeg",
+    "meaning_up": "行動迅速、邏輯明確、直攻核心",
+    "meaning_rev": "思緒過速導致錯失、語言尖銳、忽略後果"
+  },
+  {
+    "name": "寶劍13",
+    "image": "cards/RWS1909_-_Swords_13.jpeg",
+    "meaning_up": "理性清晰、獨立堅定、善於斷捨離",
+    "meaning_rev": "過度冷靜、拒絕溝通、情感與邏輯分離"
+  },
+  {
+    "name": "寶劍14",
+    "image": "cards/RWS1909_-_Swords_14.jpeg",
+    "meaning_up": "洞察犀利、善於策略規劃、權威發聲",
+    "meaning_rev": "決策獨斷、缺乏共情、過度控制資訊"
+  },
+  {
+    "name": "權杖1",
+    "image": "cards/RWS1909_-_Wands_01.jpeg",
+    "meaning_up": "創意爆發、熱情啟動、新計畫開端",
+    "meaning_rev": "能量難落地、方向模糊、激情耗散"
+  },
+  {
+    "name": "權杖2",
+    "image": "cards/RWS1909_-_Wands_02.jpeg",
+    "meaning_up": "願景擴張、行動計畫初生、探索未來可能",
+    "meaning_rev": "決策猶豫、計畫受阻、動能分散"
+  },
+  {
+    "name": "權杖3",
+    "image": "cards/RWS1909_-_Wands_03.jpeg",
+    "meaning_up": "視野拓展、創業合作、準備實踐藍圖",
+    "meaning_rev": "計劃延誤、行動卡關、對未來感到不確定"
+  },
+  {
+    "name": "權杖4",
+    "image": "cards/RWS1909_-_Wands_04.jpeg",
+    "meaning_up": "穩定落實、慶祝成功、社群建立",
+    "meaning_rev": "承諾動搖、安逸停滯、外在和諧內在不穩"
+  },
+  {
+    "name": "權杖5",
+    "image": "cards/RWS1909_-_Wands_05.jpeg",
+    "meaning_up": "競爭碰撞、理念衝突、行動不一致",
+    "meaning_rev": "無謂內耗、分裂無共識、過度防衛"
+  },
+  {
+    "name": "權杖6",
+    "image": "cards/RWS1909_-_Wands_06.jpeg",
+    "meaning_up": "勝利顯現、公認成果、帶領他人",
+    "meaning_rev": "自負膨脹、過度依賴掌聲、內在不安全感"
+  },
+  {
+    "name": "權杖7",
+    "image": "cards/RWS1909_-_Wands_07.jpeg",
+    "meaning_up": "堅守立場、面對挑戰、防衛中成長",
+    "meaning_rev": "立場搖擺、防衛過度、錯誤焦點"
+  },
+  {
+    "name": "權杖8",
+    "image": "cards/RWS1909_-_Wands_08.jpeg",
+    "meaning_up": "迅速推進、溝通暢通、機會臨近",
+    "meaning_rev": "進展延遲、訊息失焦、能量無法聚焦"
+  },
+  {
+    "name": "權杖9",
+    "image": "cards/RWS1909_-_Wands_09.jpeg",
+    "meaning_up": "經驗累積、防範意識、歷經考驗仍堅持",
+    "meaning_rev": "過度防備、疲憊警戒、不敢再信任"
+  },
+  {
+    "name": "權杖10",
+    "image": "cards/RWS1909_-_Wands_10.jpeg",
+    "meaning_up": "責任承擔、壓力極限、承載過多",
+    "meaning_rev": "無法放手、壓力壓頂、扛著不屬於自己的事"
+  },
+  {
+    "name": "權杖11",
+    "image": "cards/RWS1909_-_Wands_11.jpeg",
+    "meaning_up": "創意萌芽、熱情探索、躍躍欲試的行動初心",
+    "meaning_rev": "衝動未定、計劃不全、難以持續專注"
+  },
+  {
+    "name": "權杖12",
+    "image": "cards/RWS1909_-_Wands_12.jpeg",
+    "meaning_up": "行動快速、野心燃燒、勇往直前",
+    "meaning_rev": "能量分散、躁進失衡、忽略後果"
+  },
+  {
+    "name": "權杖13",
+    "image": "cards/RWS1909_-_Wands_13.jpeg",
+    "meaning_up": "自信外放、魅力十足、擅長引領與鼓舞",
+    "meaning_rev": "掌控欲強、情緒浮動、容易過度主導"
+  },
+  {
+    "name": "權杖14",
+    "image": "cards/RWS1909_-_Wands_14.jpeg",
+    "meaning_up": "穩健果斷、具有遠見的領導者、願景清晰",
+    "meaning_rev": "固執獨斷、忽略細節、拒絕他人意見"
+  }
+]
