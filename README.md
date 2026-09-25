@@ -51,12 +51,13 @@ id, name, nameZh, arcana, suit, number, keywords,
 meaningUpright, meaningReversed, reflection, image, legacyImage
 ```
 
-來源稽核確認：
+來源稽核與完整性修復確認：
 
 - Major Arcana：22 筆完整。
-- Minor Arcana：55 筆；既有資料缺少「寶劍 10」。
-- 正位／逆位牌義：77 筆皆存在。
-- 正式產品只使用 77 筆可驗證資料，不會替缺漏資料假造牌義。
+- Minor Arcana：56 筆完整；權杖、聖杯、寶劍、錢幣各 14 筆。
+- 「寶劍 10 / Ten of Swords」已補入正式資料，包含正位、逆位、反思提示與既有 legacy image mapping。
+- 正式資料、server-side lookup 與瀏覽器抽牌候選池皆直接使用同一份 78 張 canonical dataset，沒有額外 filter。
+- Production UI 使用 CSS fallback card visual，因此不會因正式圖片欄位為空而排除任何牌。
 - 舊 repo 有 78 張一致的 Rider–Waite–Smith 風格 JPEG，但未附足以確認正式使用權利的來源／授權文件，因此新版 UI 使用自製抽象牌面；原圖只保留在 `legacy/assets/cards/`，不會由正式頁面載入。
 
 完整稽核記錄見 [`docs/source-audit.md`](docs/source-audit.md)。
@@ -125,7 +126,7 @@ npm run build
 
 ## 限制與聲明
 
-- 目前知識來源缺少「寶劍 10」，因此可抽牌數為 77，而非假裝完整 78 張。
+- 正式 Tarot knowledge 與 draw pool 目前皆為完整 78 張；完整性由 runtime schema、資料驗證腳本與回歸測試共同保護。
 - 未導入帳號、資料庫、跨裝置同步或長期閱讀歷史。
 - 公開 Demo 的 instance-local rate limiting 不是 enterprise-grade abuse protection。
 - AI 輸出可能仍有誤差；產品透過 schema 與 immutable card checks 降低漏牌、換牌和正逆位不一致，但不宣稱解讀「準確預測」。

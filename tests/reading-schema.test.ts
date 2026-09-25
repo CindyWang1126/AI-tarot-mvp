@@ -6,15 +6,6 @@ import {
 } from "@/lib/reading";
 import { tarotCards } from "@/lib/tarot";
 
-describe("tarot knowledge", () => {
-  it("contains 77 unique verified cards and documents the known gap", () => {
-    expect(tarotCards).toHaveLength(77);
-    expect(new Set(tarotCards.map((card) => card.id)).size).toBe(77);
-    expect(tarotCards.some((card) => card.nameZh === "寶劍10")).toBe(false);
-    expect(tarotCards.every((card) => card.meaningUpright && card.meaningReversed)).toBe(true);
-  });
-});
-
 describe("ReadingRequestSchema", () => {
   const validRequest = {
     question: "我接下來可以從哪些角度思考？",

@@ -1,43 +1,35 @@
-import { readFileSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { resolve } from "node:path";
-import { z } from "zod";
+import { tarotCardIds, tarotCardMap, tarotCards } from "../lib/tarot";
 
-const CardSchema = z.object({
-  id: z.string().min(1),
-  name: z.string().min(1),
-  nameZh: z.string().min(1),
-  arcana: z.enum(["major", "minor"]),
-  suit: z.enum(["cups", "pentacles", "swords", "wands"]).nullable(),
-  number: z.number().int().min(0).max(21),
-  keywords: z.array(z.string().min(1)).min(1),
-  meaningUpright: z.string().min(1),
-  meaningReversed: z.string().min(1),
-  reflection: z.string().min(1),
-  image: z.string().nullable(),
-  legacyImage: z.string().min(1),
-});
+const counts = {
+  major: tarotCards.filter((card) => card.arcana === "major").length,
+  minor: tarotCards.filter((card) => card.arcana === "minor").length,
+  cups: tarotCards.filter((card) => card.suit === "cups").length,
+  pentacles: tarotCards.filter((card) => card.suit === "pentacles").length,
+  swords: tarotCards.filter((card) => card.suit === "swords").length,
+  wands: tarotCards.filter((card) => card.suit === "wands").length,
+};
 
-const cards = z
-  .array(CardSchema)
-  .parse(JSON.parse(readFileSync(resolve("data/tarot-cards.json"), "utf8")));
-
-const ids = new Set(cards.map((card) => card.id));
-if (ids.size !== cards.length) {
-  throw new Error("Tarot card IDs must be unique.");
-}
-
-const names = new Set(cards.map((card) => card.nameZh));
-if (names.size !== cards.length) {
-  throw new Error("Tarot card names must be unique.");
-}
-
-const knownGap = !cards.some((card) => card.nameZh === "寶劍10");
-if (cards.length !== 77 || !knownGap) {
+const missingLegacyImages = tarotCards.filter(
+  (card) => !existsSync(resolve(card.legacyImage)),
+);
+if (missingLegacyImages.length > 0) {
   throw new Error(
-    "Expected 77 verified source records with the documented 寶劍10 gap.",
+    `Missing legacy image mappings: ${missingLegacyImages
+      .map((card) => `${card.id} -> ${card.legacyImage}`)
+      .join(", ")}`,
   );
 }
 
+if (tarotCardIds.length !== 78 || tarotCardMap.size !== 78) {
+  throw new Error("The production draw pool must contain exactly 78 unique cards.");
+}
+
 console.log(
-  "Tarot knowledge validated: 77 unique records; 寶劍10 remains excluded because no source meanings exist.",
+  `Tarot knowledge validated: ${tarotCards.length} cards; ` +
+    `${counts.major} Major; ${counts.minor} Minor; ` +
+    `Cups ${counts.cups}; Pentacles ${counts.pentacles}; ` +
+    `Swords ${counts.swords}; Wands ${counts.wands}; ` +
+    `draw pool ${tarotCardIds.length}; missing legacy images ${missingLegacyImages.length}.`,
 );

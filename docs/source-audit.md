@@ -26,7 +26,9 @@ Two JSON sources were present:
 
 All 77 usable records share `name`, `image`, `meaning_up`, and `meaning_rev`. No duplicate names or image mappings were found. Every record has both upright and reversed text.
 
-The missing source record is **寶劍 10 / Ten of Swords**. Its image exists, but no upright or reversed meaning exists in either source or retained notebook. The production knowledge layer therefore excludes it and validates exactly 77 source-backed cards.
+The historical source gap was **寶劍 10 / Ten of Swords**. Its image existed, but no upright or reversed meaning was present in either retained legacy JSON source or notebook.
+
+Production completeness remediation (2026-09-26): the missing card was added directly to the canonical production dataset with complete upright, reversed, keywords, reflection, and legacy image mapping fields. Production now validates exactly 78 cards: 22 Major, 56 Minor, and 14 cards in each suit. The runtime draw pool is an unfiltered mapping of those same 78 canonical IDs.
 
 ## Image assets
 

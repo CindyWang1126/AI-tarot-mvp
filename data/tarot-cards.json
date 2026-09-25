@@ -1060,6 +1060,24 @@
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_09.jpeg"
   },
   {
+    "id": "swords-10-ten",
+    "name": "Ten of Swords",
+    "nameZh": "寶劍10",
+    "arcana": "minor",
+    "suit": "swords",
+    "number": 10,
+    "keywords": [
+      "階段徹底結束",
+      "面對難以迴避的結果",
+      "在低點準備重啟"
+    ],
+    "meaningUpright": "階段徹底結束、面對難以迴避的結果、在低點準備重啟",
+    "meaningReversed": "逐步走出低谷、抗拒必要的結束、舊傷仍待整理",
+    "reflection": "當「階段徹底結束」成為線索，這個情境還能從哪個角度理解？",
+    "image": null,
+    "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_10.jpeg"
+  },
+  {
     "id": "swords-11-page",
     "name": "Page of Swords",
     "nameZh": "寶劍11",

@@ -2,7 +2,9 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const sourcePath = resolve("legacy/data/tarot_cards.json");
-const outputPath = resolve("data/tarot-cards.json");
+// This utility preserves the historical 77-card import only. It must never
+// overwrite the complete canonical production deck in data/tarot-cards.json.
+const outputPath = resolve("legacy/data/tarot-cards.normalized.json");
 const source = JSON.parse(readFileSync(sourcePath, "utf8"));
 
 const majors = [
