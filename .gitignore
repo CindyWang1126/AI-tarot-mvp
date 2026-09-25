@@ -1,0 +1,21 @@
+# Dependencies and builds
+node_modules/
+.next/
+out/
+coverage/
+
+# Local environment files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# Local task material
+AI-Tarot-Production-Rebuild-Codex-Instructions.txt
+
+# System and editor files
+.DS_Store
+*.log
+.vercel/
+
+# TypeScript cache
+*.tsbuildinfo
