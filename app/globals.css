@@ -73,15 +73,34 @@ main::before {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 90px;
+  top: 0;
   left: 50%;
-  width: min(1500px, 120vw);
-  height: 780px;
+  width: 100vw;
+  height: 1030px;
   transform: translateX(-50%);
   background:
-    radial-gradient(ellipse at 76% 35%, rgba(140, 71, 128, 0.19), transparent 37%),
-    radial-gradient(ellipse at 32% 54%, rgba(104, 172, 204, 0.1), transparent 44%);
-  filter: blur(24px);
+    linear-gradient(90deg, rgba(8, 4, 17, 0.94) 0%, rgba(9, 6, 22, 0.7) 36%, rgba(8, 6, 20, 0.18) 69%, rgba(7, 6, 15, 0.08) 100%),
+    linear-gradient(180deg, rgba(7, 4, 15, 0.12) 0%, rgba(8, 6, 17, 0.08) 65%, #0b0714 100%),
+    url("/hero-tarot-world.webp") center top / cover no-repeat;
+  filter: saturate(1.08) contrast(1.02);
+  mask-image: linear-gradient(#000 0 82%, transparent 100%);
+  pointer-events: none;
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 760px;
+  left: 50%;
+  width: 118vw;
+  height: 1500px;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(ellipse at 18% 28%, rgba(168, 64, 129, 0.2), transparent 36%),
+    radial-gradient(ellipse at 83% 18%, rgba(56, 158, 200, 0.15), transparent 34%),
+    radial-gradient(ellipse at 50% 74%, rgba(191, 132, 69, 0.09), transparent 42%);
+  filter: blur(34px);
   pointer-events: none;
 }
 
@@ -143,11 +162,14 @@ button:disabled {
 }
 
 .site-nav {
+  position: relative;
+  z-index: 4;
   height: 94px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(224, 212, 226, 0.1);
+  border-bottom: 1px solid rgba(238, 215, 190, 0.18);
+  text-shadow: 0 2px 14px rgba(4, 3, 12, 0.75);
 }
 
 .brand-lockup {
@@ -233,12 +255,12 @@ button:disabled {
 
 .hero {
   position: relative;
-  min-height: 760px;
+  min-height: 830px;
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.75fr);
   align-items: center;
   gap: 66px;
-  padding-block: 100px 132px;
+  padding-block: 100px 146px;
 }
 
 .hero::before {
@@ -317,6 +339,7 @@ button:disabled {
   font-size: clamp(52px, 4.8vw, 72px);
   line-height: 1.19;
   letter-spacing: -0.045em;
+  text-shadow: 0 4px 32px rgba(8, 3, 15, 0.96), 0 0 54px rgba(100, 40, 96, 0.35);
 }
 
 .hero-second-line,
@@ -335,6 +358,7 @@ button:disabled {
   color: #c9c1ce;
   font-size: 17px;
   line-height: 2;
+  text-shadow: 0 2px 18px rgba(5, 3, 12, 0.92);
 }
 
 .hero-meta {
@@ -557,7 +581,7 @@ button:disabled {
 
 .experience-shell {
   position: relative;
-  padding-block: 8px 132px;
+  padding-block: 42px 146px;
 }
 
 .experience-shell::before {
@@ -566,12 +590,13 @@ button:disabled {
   z-index: -1;
   left: 50%;
   top: 36%;
-  width: 920px;
-  height: 500px;
+  width: 1080px;
+  height: 660px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 36% 48%, rgba(95, 151, 183, 0.11), transparent 44%),
-    radial-gradient(circle at 64% 52%, rgba(137, 64, 123, 0.13), transparent 64%);
+    radial-gradient(circle at 23% 42%, rgba(73, 175, 213, 0.17), transparent 38%),
+    radial-gradient(circle at 70% 34%, rgba(185, 72, 145, 0.2), transparent 46%),
+    radial-gradient(circle at 52% 72%, rgba(214, 158, 71, 0.1), transparent 50%);
   filter: blur(34px);
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -581,20 +606,21 @@ button:disabled {
 .cards-stage,
 .shuffle-stage,
 .restore-state {
-  border: 1px solid rgba(219, 202, 222, 0.17);
+  border: 1px solid rgba(230, 201, 158, 0.28);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(circle at 83% 4%, rgba(139, 69, 126, 0.12), transparent 30%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent 38%),
-    linear-gradient(155deg, rgba(35, 20, 48, 0.86), rgba(11, 16, 35, 0.92));
-  box-shadow: var(--shadow), 0 0 70px rgba(99, 56, 107, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    radial-gradient(circle at 88% 0%, rgba(199, 74, 153, 0.19), transparent 31%),
+    radial-gradient(circle at 8% 94%, rgba(71, 171, 214, 0.17), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.055), transparent 38%),
+    linear-gradient(155deg, rgba(57, 19, 55, 0.91), rgba(12, 17, 41, 0.94) 62%, rgba(13, 31, 48, 0.92));
+  box-shadow: var(--shadow), 0 0 95px rgba(129, 53, 121, 0.16), 0 0 54px rgba(70, 152, 196, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(22px);
 }
 
 .question-panel {
   width: min(780px, 100%);
   margin-inline: auto;
-  padding: 52px;
+  padding: 58px;
   position: relative;
   overflow: hidden;
 }
@@ -603,10 +629,10 @@ button:disabled {
   content: "";
   position: absolute;
   inset: 0 auto auto 0;
-  width: 55%;
+  width: 72%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(212, 174, 104, 0.66), rgba(183, 216, 236, 0.44), transparent);
-  opacity: 0.68;
+  background: linear-gradient(90deg, rgba(238, 192, 111, 0.9), rgba(196, 231, 248, 0.68), rgba(221, 104, 174, 0.42), transparent);
+  opacity: 0.86;
 }
 
 .question-panel::after {
@@ -616,8 +642,9 @@ button:disabled {
   top: -106px;
   width: 260px;
   height: 260px;
-  border: 1px solid rgba(180, 216, 237, 0.1);
+  border: 1px solid rgba(190, 226, 245, 0.17);
   border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(221, 181, 102, 0.025), 0 0 70px rgba(92, 172, 210, 0.08);
   pointer-events: none;
 }
 
@@ -678,12 +705,13 @@ button:disabled {
   min-height: 148px;
   resize: vertical;
   padding: 20px 22px;
-  border: 1px solid rgba(206, 198, 219, 0.19);
+  border: 1px solid rgba(219, 198, 218, 0.27);
   border-radius: 17px;
   color: var(--ivory);
   background:
-    linear-gradient(135deg, rgba(98, 53, 94, 0.08), transparent 44%),
-    rgba(6, 7, 21, 0.44);
+    radial-gradient(circle at 92% 10%, rgba(110, 196, 228, 0.09), transparent 30%),
+    linear-gradient(135deg, rgba(128, 48, 106, 0.12), transparent 44%),
+    rgba(5, 7, 24, 0.58);
   line-height: 1.75;
   box-shadow: inset 0 1px 14px rgba(0, 0, 0, 0.11);
   transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
@@ -735,11 +763,12 @@ button:disabled {
   min-height: 56px;
   place-items: center;
   border: 1px solid rgba(209, 201, 220, 0.13);
-  border-radius: 13px;
+  border-radius: 18px 18px 13px 13px;
   color: var(--silver);
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.025), transparent 45%),
-    rgba(19, 14, 35, 0.46);
+    radial-gradient(circle at 50% -10%, rgba(217, 174, 103, 0.1), transparent 52%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.04), transparent 45%),
+    rgba(18, 12, 39, 0.62);
   font-size: 13px;
   transition: 180ms ease;
 }
@@ -759,9 +788,10 @@ button:disabled {
   border-color: rgba(202, 172, 111, 0.48);
   color: var(--ice-bright);
   background:
-    radial-gradient(circle at 82% 12%, rgba(144, 201, 228, 0.18), transparent 30%),
-    linear-gradient(135deg, rgba(94, 137, 170, 0.16), rgba(123, 56, 113, 0.19));
-  box-shadow: 0 0 30px rgba(105, 165, 198, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    radial-gradient(circle at 50% 8%, rgba(239, 206, 143, 0.2), transparent 34%),
+    radial-gradient(circle at 88% 88%, rgba(90, 191, 229, 0.18), transparent 35%),
+    linear-gradient(135deg, rgba(129, 60, 130, 0.34), rgba(52, 99, 135, 0.28));
+  box-shadow: 0 0 34px rgba(119, 185, 218, 0.14), 0 0 24px rgba(203, 128, 178, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transform: translateY(-1px);
 }
 
@@ -794,9 +824,10 @@ button:disabled {
   border-color: rgba(218, 183, 116, 0.48);
   color: #f5edf2;
   background:
-    linear-gradient(110deg, rgba(255, 255, 255, 0.08), transparent 32%),
-    linear-gradient(105deg, #4a1b45 0%, #382044 45%, #24384e 100%);
-  box-shadow: 0 14px 38px rgba(74, 29, 69, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    radial-gradient(circle at 50% 0%, rgba(240, 218, 168, 0.2), transparent 42%),
+    linear-gradient(110deg, rgba(255, 255, 255, 0.1), transparent 32%),
+    linear-gradient(105deg, #701f58 0%, #462052 38%, #244c6b 100%);
+  box-shadow: 0 14px 42px rgba(91, 23, 78, 0.38), 0 0 26px rgba(95, 180, 220, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .button.primary:not(:disabled):hover {
@@ -867,6 +898,14 @@ button:disabled {
   text-align: center;
 }
 
+.shuffle-stage {
+  background:
+    repeating-conic-gradient(from 12deg at 50% 42%, rgba(235, 190, 109, 0.05) 0 0.7deg, transparent 0.7deg 8deg),
+    radial-gradient(circle at 50% 40%, rgba(205, 83, 161, 0.22), transparent 28%),
+    radial-gradient(circle at 50% 55%, rgba(74, 175, 218, 0.14), transparent 45%),
+    linear-gradient(155deg, rgba(62, 17, 58, 0.94), rgba(9, 15, 37, 0.96));
+}
+
 .shuffle-stage h2 {
   margin: 12px 0 5px;
   font-family: Georgia, serif;
@@ -909,7 +948,39 @@ button:disabled {
 }
 
 .cards-stage {
+  position: relative;
+  overflow: hidden;
   padding: 54px 46px;
+  background:
+    repeating-conic-gradient(from 0deg at 50% 55%, rgba(235, 194, 115, 0.025) 0 0.5deg, transparent 0.5deg 12deg),
+    radial-gradient(circle at 13% 82%, rgba(193, 59, 130, 0.2), transparent 34%),
+    radial-gradient(circle at 83% 20%, rgba(58, 166, 214, 0.19), transparent 35%),
+    radial-gradient(circle at 50% 56%, rgba(231, 179, 86, 0.08), transparent 44%),
+    linear-gradient(155deg, rgba(47, 12, 48, 0.95), rgba(8, 13, 35, 0.97));
+}
+
+.cards-stage::before,
+.cards-stage::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(189, 224, 243, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cards-stage::before {
+  top: 19%;
+  left: -260px;
+  box-shadow: 0 0 0 34px rgba(214, 170, 94, 0.018), 0 0 90px rgba(91, 177, 216, 0.08);
+}
+
+.cards-stage::after {
+  right: -240px;
+  bottom: -210px;
+  box-shadow: 0 0 0 46px rgba(210, 95, 166, 0.022), 0 0 100px rgba(202, 95, 162, 0.08);
 }
 
 .cards-heading {
@@ -951,7 +1022,7 @@ button:disabled {
 
 .tarot-card {
   width: min(100%, 245px);
-  aspect-ratio: 0.62;
+  aspect-ratio: 0.575;
   display: block;
   margin-inline: auto;
   padding: 0;
@@ -984,7 +1055,7 @@ button:disabled {
 }
 
 .tarot-card.is-revealed {
-  animation: reveal-lift 1100ms cubic-bezier(0.2, 0.72, 0.2, 1) both;
+  animation: reveal-lift 1250ms cubic-bezier(0.2, 0.72, 0.2, 1) both;
 }
 
 .drawn-card-wrap:nth-child(2) .tarot-card.is-revealed {
@@ -1018,11 +1089,11 @@ button:disabled {
 
 .card-back {
   background:
-    repeating-conic-gradient(from 8deg at 50% 43%, rgba(231, 196, 121, 0.055) 0 0.8deg, transparent 0.8deg 8deg),
-    radial-gradient(circle at 50% 42%, rgba(215, 122, 180, 0.24), transparent 30%),
-    radial-gradient(circle at 48% 48%, rgba(110, 178, 211, 0.08), transparent 48%),
-    linear-gradient(160deg, #5a1e4c 0%, #321333 43%, #181227 72%, #10162a 100%);
-  box-shadow: 0 30px 76px rgba(3, 1, 13, 0.42), 0 0 38px rgba(92, 46, 102, 0.11), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    repeating-conic-gradient(from 8deg at 50% 43%, rgba(244, 201, 111, 0.075) 0 0.8deg, transparent 0.8deg 8deg),
+    radial-gradient(circle at 50% 42%, rgba(239, 92, 184, 0.3), transparent 29%),
+    radial-gradient(circle at 48% 48%, rgba(89, 198, 238, 0.14), transparent 49%),
+    linear-gradient(160deg, #751f5d 0%, #3f153f 42%, #1c1735 72%, #0c1c33 100%);
+  box-shadow: 0 30px 76px rgba(3, 1, 13, 0.48), 0 0 46px rgba(175, 64, 144, 0.18), 0 0 30px rgba(73, 168, 213, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .card-back::before {
@@ -1135,7 +1206,7 @@ button:disabled {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 600ms cubic-bezier(0.2, 0.72, 0.2, 1);
 }
 
@@ -1164,18 +1235,46 @@ button:disabled {
   bottom: 13px;
   left: 13px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 10px;
-  padding: 8px 9px 8px 12px;
+  padding: 9px 9px 9px 12px;
   border: 1px solid rgba(226, 197, 125, 0.26);
   border-radius: 10px;
   color: #f8f2f2;
-  background: rgba(10, 8, 18, 0.72);
+  background: linear-gradient(90deg, rgba(10, 7, 18, 0.91), rgba(22, 12, 28, 0.8));
   box-shadow: 0 10px 24px rgba(3, 2, 8, 0.28);
   backdrop-filter: blur(10px);
   font-family: Georgia, "Noto Serif TC", serif;
   font-size: 13px;
+}
+
+.card-caption-names {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+}
+
+.card-face .card-caption-names strong {
+  width: 100%;
+  overflow: hidden;
+  color: var(--gold-bright);
+  font-family: Georgia, serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.card-caption-names span {
+  margin-top: 4px;
+  color: #fff8f3;
+  font-family: Georgia, "Noto Serif TC", serif;
+  font-size: 14px;
 }
 
 .card-face-caption .orientation-pill {
@@ -1294,11 +1393,12 @@ button:disabled {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 13% -20% auto;
-  height: 660px;
+  inset: 4% -20% auto;
+  height: 1040px;
   background:
-    radial-gradient(ellipse at 66% 38%, rgba(131, 60, 118, 0.12), transparent 48%),
-    radial-gradient(ellipse at 35% 55%, rgba(86, 147, 181, 0.09), transparent 66%);
+    radial-gradient(ellipse at 74% 18%, rgba(201, 66, 145, 0.2), transparent 36%),
+    radial-gradient(ellipse at 24% 44%, rgba(55, 165, 215, 0.17), transparent 42%),
+    radial-gradient(ellipse at 52% 78%, rgba(219, 166, 76, 0.09), transparent 45%);
   filter: blur(30px);
 }
 
@@ -1329,11 +1429,12 @@ button:disabled {
   position: relative;
   overflow: hidden;
   padding: 34px 38px;
-  border: 1px solid rgba(213, 195, 211, 0.15);
+  border: 1px solid rgba(224, 190, 147, 0.26);
   border-radius: var(--radius-md);
   background:
-    radial-gradient(circle at 92% 18%, rgba(132, 193, 221, 0.12), transparent 26%),
-    linear-gradient(135deg, rgba(57, 25, 55, 0.58), rgba(11, 18, 36, 0.72));
+    radial-gradient(circle at 92% 18%, rgba(112, 207, 241, 0.18), transparent 29%),
+    radial-gradient(circle at 6% 92%, rgba(213, 75, 151, 0.14), transparent 33%),
+    linear-gradient(135deg, rgba(81, 24, 67, 0.76), rgba(11, 20, 44, 0.84));
   backdrop-filter: blur(18px);
 }
 
@@ -1368,25 +1469,28 @@ button:disabled {
 .interpretation-card {
   min-width: 0;
   padding: 30px;
-  border: 1px solid rgba(215, 204, 220, 0.14);
+  border: 1px solid rgba(228, 198, 153, 0.22);
   border-radius: var(--radius-md);
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.025), transparent 40%),
-    linear-gradient(150deg, rgba(42, 24, 54, 0.78), rgba(10, 18, 35, 0.88));
+    radial-gradient(circle at 14% 6%, rgba(208, 79, 153, 0.13), transparent 28%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), transparent 40%),
+    linear-gradient(150deg, rgba(57, 20, 61, 0.88), rgba(9, 20, 42, 0.94));
   box-shadow: var(--soft-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.025);
   backdrop-filter: blur(16px);
 }
 
 .interpretation-card:nth-child(2) {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.026), transparent 42%),
-    linear-gradient(155deg, rgba(22, 39, 59, 0.8), rgba(22, 15, 42, 0.88));
+    radial-gradient(circle at 86% 8%, rgba(72, 182, 224, 0.17), transparent 28%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), transparent 42%),
+    linear-gradient(155deg, rgba(21, 49, 74, 0.9), rgba(26, 14, 49, 0.94));
 }
 
 .interpretation-card:nth-child(3) {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.025), transparent 40%),
-    linear-gradient(150deg, rgba(53, 25, 47, 0.76), rgba(12, 17, 34, 0.88));
+    radial-gradient(circle at 50% 0%, rgba(225, 177, 82, 0.14), transparent 30%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), transparent 40%),
+    linear-gradient(150deg, rgba(72, 27, 55, 0.88), rgba(11, 20, 40, 0.94));
 }
 
 .interpretation-topline {
@@ -1398,28 +1502,29 @@ button:disabled {
 }
 
 .result-card-art {
-  height: 212px;
+  height: 270px;
   display: grid;
   place-items: center;
   margin: 25px 0;
-  border: 1px solid rgba(207, 181, 125, 0.17);
+  border: 1px solid rgba(227, 190, 118, 0.28);
   border-radius: 14px;
   color: var(--ice);
   background:
-    repeating-conic-gradient(from 0deg, rgba(223, 190, 122, 0.045) 0 1deg, transparent 1deg 14deg),
-    radial-gradient(circle, rgba(137, 185, 211, 0.15), transparent 54%);
+    repeating-conic-gradient(from 0deg, rgba(236, 196, 113, 0.06) 0 1deg, transparent 1deg 14deg),
+    radial-gradient(circle at 50% 42%, rgba(130, 202, 235, 0.19), transparent 44%),
+    linear-gradient(145deg, rgba(74, 24, 69, 0.32), rgba(10, 20, 42, 0.45));
   font-size: 28px;
   overflow: hidden;
 }
 
 .result-card-art img {
-  width: 116px;
-  height: 193px;
+  width: 139px;
+  height: 239px;
   display: block;
   border: 1px solid rgba(226, 195, 125, 0.36);
   border-radius: 9px;
-  object-fit: cover;
-  box-shadow: 0 18px 36px rgba(2, 2, 10, 0.38);
+  object-fit: contain;
+  box-shadow: 0 20px 42px rgba(2, 2, 10, 0.48), 0 0 30px rgba(222, 178, 92, 0.1);
 }
 
 .result-card-art img.is-reversed {
@@ -1502,9 +1607,11 @@ button:disabled {
 .advice-grid > article,
 .reflection-panel {
   padding: 40px;
-  border: 1px solid rgba(211, 200, 217, 0.14);
+  border: 1px solid rgba(219, 196, 185, 0.19);
   border-radius: var(--radius-md);
-  background: linear-gradient(145deg, rgba(36, 21, 49, 0.66), rgba(9, 17, 32, 0.76));
+  background:
+    radial-gradient(circle at 10% 10%, rgba(203, 73, 151, 0.11), transparent 28%),
+    linear-gradient(145deg, rgba(53, 20, 56, 0.78), rgba(8, 20, 39, 0.88));
   backdrop-filter: blur(16px);
 }
 
@@ -1561,11 +1668,13 @@ button:disabled {
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
-  border-color: rgba(213, 179, 111, 0.25);
+  border-color: rgba(231, 192, 118, 0.42);
   background:
-    radial-gradient(circle at 85% 12%, rgba(210, 174, 107, 0.1), transparent 30%),
-    radial-gradient(circle at 15% 88%, rgba(109, 180, 215, 0.13), transparent 38%),
-    linear-gradient(145deg, rgba(70, 28, 63, 0.72), rgba(18, 20, 45, 0.9));
+    radial-gradient(circle at 85% 12%, rgba(239, 191, 99, 0.17), transparent 30%),
+    radial-gradient(circle at 15% 88%, rgba(96, 193, 234, 0.2), transparent 38%),
+    radial-gradient(circle at 20% 10%, rgba(215, 71, 155, 0.14), transparent 34%),
+    linear-gradient(145deg, rgba(88, 25, 69, 0.84), rgba(15, 23, 54, 0.96));
+  box-shadow: 0 28px 80px rgba(62, 21, 65, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .reflection-panel > span {
@@ -1591,8 +1700,15 @@ button:disabled {
   display: grid;
   grid-template-columns: minmax(270px, 0.85fr) 1.15fr;
   gap: 100px;
-  padding-block: 126px;
+  margin-top: 20px;
+  padding: 118px 64px;
   border-top: 1px solid rgba(218, 197, 211, 0.11);
+  border-bottom: 1px solid rgba(197, 220, 236, 0.1);
+  background:
+    radial-gradient(circle at 4% 8%, rgba(214, 88, 156, 0.13), transparent 27%),
+    radial-gradient(circle at 96% 88%, rgba(75, 178, 219, 0.13), transparent 31%),
+    linear-gradient(110deg, rgba(62, 20, 57, 0.32), rgba(14, 23, 43, 0.32));
+  clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
 }
 
 .how-it-works::after {

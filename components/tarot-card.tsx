@@ -67,8 +67,8 @@ export function TarotCardVisual({
               <Image
                 src={card.image}
                 alt=""
-                width={600}
-                height={1000}
+                width={846}
+                height={1453}
                 sizes="(max-width: 768px) 78vw, 245px"
                 className={`card-art ${
                   drawn.orientation === "reversed" ? "is-reversed" : ""
@@ -91,7 +91,10 @@ export function TarotCardVisual({
               </span>
             )}
             <span className="card-face-caption">
-              <span>{card.nameZh}</span>
+              <span className="card-caption-names">
+                <strong>{card.name}</strong>
+                <span>{card.nameZh}</span>
+              </span>
               <span className="orientation-pill">{orientation}</span>
             </span>
           </span>

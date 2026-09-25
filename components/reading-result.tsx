@@ -64,8 +64,8 @@ export function ReadingResult({
                   <Image
                     src={card.image}
                     alt=""
-                    width={600}
-                    height={1000}
+                    width={846}
+                    height={1453}
                     sizes="150px"
                     className={drawn.orientation === "reversed" ? "is-reversed" : ""}
                   />

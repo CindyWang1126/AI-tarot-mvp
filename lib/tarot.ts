@@ -22,26 +22,26 @@ const suits = ["cups", "pentacles", "swords", "wands"] as const;
 
 const suitNames = {
   cups: { en: "Cups", zh: "聖杯" },
-  pentacles: { en: "Pentacles", zh: "錢幣" },
+  pentacles: { en: "Pentacles", zh: "星幣" },
   swords: { en: "Swords", zh: "寶劍" },
   wands: { en: "Wands", zh: "權杖" },
 } as const;
 
 const ranks = {
-  1: { slug: "ace", name: "Ace" },
-  2: { slug: "two", name: "Two" },
-  3: { slug: "three", name: "Three" },
-  4: { slug: "four", name: "Four" },
-  5: { slug: "five", name: "Five" },
-  6: { slug: "six", name: "Six" },
-  7: { slug: "seven", name: "Seven" },
-  8: { slug: "eight", name: "Eight" },
-  9: { slug: "nine", name: "Nine" },
-  10: { slug: "ten", name: "Ten" },
-  11: { slug: "page", name: "Page" },
-  12: { slug: "knight", name: "Knight" },
-  13: { slug: "queen", name: "Queen" },
-  14: { slug: "king", name: "King" },
+  1: { slug: "ace", name: "Ace", zh: "一" },
+  2: { slug: "two", name: "Two", zh: "二" },
+  3: { slug: "three", name: "Three", zh: "三" },
+  4: { slug: "four", name: "Four", zh: "四" },
+  5: { slug: "five", name: "Five", zh: "五" },
+  6: { slug: "six", name: "Six", zh: "六" },
+  7: { slug: "seven", name: "Seven", zh: "七" },
+  8: { slug: "eight", name: "Eight", zh: "八" },
+  9: { slug: "nine", name: "Nine", zh: "九" },
+  10: { slug: "ten", name: "Ten", zh: "十" },
+  11: { slug: "page", name: "Page", zh: "侍者" },
+  12: { slug: "knight", name: "Knight", zh: "騎士" },
+  13: { slug: "queen", name: "Queen", zh: "皇后" },
+  14: { slug: "king", name: "King", zh: "國王" },
 } as const;
 
 function addDeckIssue(context: z.RefinementCtx, message: string): void {
@@ -96,7 +96,7 @@ export const TarotDeckSchema = z
 
         const expectedId = `${suit}-${String(number).padStart(2, "0")}-${rank.slug}`;
         const expectedName = `${rank.name} of ${suitName.en}`;
-        const expectedNameZh = `${suitName.zh}${number}`;
+        const expectedNameZh = `${suitName.zh}${rank.zh}`;
         if (
           card.id !== expectedId ||
           card.name !== expectedName ||

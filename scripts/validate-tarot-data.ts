@@ -25,7 +25,7 @@ if (missingLegacyImages.length > 0) {
 const missingProductionImages = tarotCards.filter(
   (card) =>
     card.image === null ||
-    card.image !== `/cards/${card.id}.svg` ||
+    card.image !== `/cards/${card.id}.jpeg` ||
     !existsSync(resolve("public", card.image.slice(1))),
 );
 if (missingProductionImages.length > 0) {

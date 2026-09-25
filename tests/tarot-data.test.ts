@@ -29,7 +29,7 @@ describe("canonical Tarot knowledge", () => {
       (card) =>
         card.id === "swords-10-ten" &&
         card.name === "Ten of Swords" &&
-        card.nameZh === "寶劍10" &&
+        card.nameZh === "寶劍十" &&
         card.suit === "swords" &&
         card.number === 10,
     );
@@ -58,10 +58,47 @@ describe("canonical Tarot knowledge", () => {
       tarotCards.every(
         (card) =>
           card.image !== null &&
-          card.image === `/cards/${card.id}.svg` &&
+          card.image === `/cards/${card.id}.jpeg` &&
           existsSync(resolve("public", card.image.slice(1))),
       ),
     ).toBe(true);
+  });
+
+  it("uses reader-facing Chinese rank names instead of internal court numbers", () => {
+    const expectedRanks = [
+      "一",
+      "二",
+      "三",
+      "四",
+      "五",
+      "六",
+      "七",
+      "八",
+      "九",
+      "十",
+      "侍者",
+      "騎士",
+      "皇后",
+      "國王",
+    ];
+    const suitNames = {
+      wands: "權杖",
+      cups: "聖杯",
+      swords: "寶劍",
+      pentacles: "星幣",
+    } as const;
+
+    for (const [suit, suitName] of Object.entries(suitNames)) {
+      const suitCards = tarotCards
+        .filter((card) => card.suit === suit)
+        .sort((a, b) => a.number - b.number);
+      expect(suitCards.map((card) => card.nameZh)).toEqual(
+        expectedRanks.map((rank) => `${suitName}${rank}`),
+      );
+      expect(
+        suitCards.some((card) => /(?:11|12|13|14)$/.test(card.nameZh)),
+      ).toBe(false);
+    }
   });
 });
 

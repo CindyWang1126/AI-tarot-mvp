@@ -52,13 +52,13 @@ meaningUpright, meaningReversed, reflection, image, legacyImage
 來源稽核與完整性修復確認：
 
 - Major Arcana：22 筆完整。
-- Minor Arcana：56 筆完整；權杖、聖杯、寶劍、錢幣各 14 筆。
-- 「寶劍 10 / Ten of Swords」已補入正式資料，包含正位、逆位、反思提示與既有 legacy image mapping。
+- Minor Arcana：56 筆完整；權杖、聖杯、寶劍、星幣各 14 筆。
+- 「寶劍十 / Ten of Swords」已補入正式資料，包含正位、逆位、反思提示與完整圖像 mapping。
 - 正式資料、server-side lookup 與瀏覽器抽牌候選池皆直接使用同一份 78 張 canonical dataset，沒有額外 filter。
-- `public/cards/` 內有 78 張原創固定 SVG 牌圖，每張透過 `image` 欄位一對一映射；正式環境不會在 runtime 生成圖片。
-- 牌圖由 `scripts/generate-tarot-card-assets.ts` 以同一份 canonical dataset 產生，可重現且沒有引用來源不明的網路圖片。
+- `public/cards/` 內有 78 張完整 Rider–Waite–Smith 1909 圖像 JPEG，每張透過 `image` 欄位一對一映射；正式環境不會在 runtime 生成或預載完整牌組。
+- `scripts/generate-tarot-card-assets.ts` 只依 canonical dataset 將已保留的來源圖複製為固定 production asset，並同步標準化中文牌名，不負責生成新圖。
 - Production UI 保留 CSS fallback card visual，因此即使圖片載入異常，也不會從抽牌候選池移除任何牌。
-- 舊 repo 有 78 張一致的 Rider–Waite–Smith 風格 JPEG，但未附足以確認正式使用權利的來源／授權文件，因此新版 UI 使用自製抽象牌面；原圖只保留在 `legacy/assets/cards/`，不會由正式頁面載入。
+- 先前使用的 78 張抽象 SVG 已移至 `legacy/assets/generated-symbol-deck/`，正式 UI 不再載入。
 
 完整稽核記錄見 [`docs/source-audit.md`](docs/source-audit.md)。
 
@@ -133,7 +133,7 @@ npm run build
 
 ## Asset attribution
 
-舊版圖片檔名與風格顯示為 1909 Rider–Waite–Smith deck，但 repo 沒有包含完整的來源 URL 或授權證明。這些檔案被視為 legacy/demo assets；本專案不對其商業使用權作保證，新版正式 UI 也不使用它們。正式牌組為本專案原創的 78 張程式化向量圖，參考素材只用於氣氛與配色方向，未直接納入網頁資產。
+正式牌面使用 Rider–Waite–Smith 1909 圖像；原始美術由 Pamela Colman Smith 繪製、由 A. E. Waite 指導。Wikimedia Commons 對同一 1909 牌組與 Yale University Library 掃描標示為 public domain（例如 [完整大阿爾克那](https://commons.wikimedia.org/wiki/File:Rider-Waite_Major_Arcana_full.png)、[寶劍十](https://commons.wikimedia.org/wiki/File:Swords10.jpg)）。本 repo 原有 JPEG 沒有內嵌來源 URL 或獨立 license 檔，因此 `docs/source-audit.md` 仍保留這項 provenance 限制；production 使用的每張圖均保留固定一對一 mapping，沒有從執行環境即時抓取第三方圖片。
 
 ---
 

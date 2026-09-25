@@ -1,6 +1,6 @@
 # Source audit
 
-Audit date: 2026-09-25
+Audit date: 2026-09-26
 
 ## Existing application
 
@@ -35,10 +35,14 @@ Production completeness remediation (2026-09-26): the missing card was added dir
 - 78 JPEG images exist under the legacy asset folder.
 - Dimensions range from approximately 812–860 px wide and 1412–1459 px high.
 - Total size is approximately 21 MB.
-- Naming and visual proportions are consistent; the source-data mapping is complete except that `RWS1909_-_Swords_10.jpeg` has no knowledge record.
-- The repo does not include a source URL, license text, or commercial-use proof for the files.
+- Naming and visual proportions are consistent; before remediation, `RWS1909_-_Swords_10.jpeg` was the only image without a knowledge record.
+- The repo does not include an embedded source URL or standalone license file for these JPEG copies.
 
-Decision: retain every original file under `legacy/assets/cards/`, but do not copy or load them in the production web UI. Production uses 78 original, deterministic SVG artworks under `public/cards/`, generated from the canonical card records by `scripts/generate-tarot-card-assets.ts`. Each asset has a stable one-to-one `/cards/<card-id>.svg` mapping, while the UI retains an abstract CSS fallback so image failure never removes a draw candidate. The provided photographs and visual board informed atmosphere and palette only; no pixels or third-party card artwork were incorporated into production assets.
+Decision (updated 2026-09-26): use the retained full-scene Rider–Waite–Smith 1909 JPEG set as the production deck. Independent public-domain corroboration is available from Wikimedia Commons for the [complete Major Arcana](https://commons.wikimedia.org/wiki/File:Rider-Waite_Major_Arcana_full.png), [Ten of Swords](https://commons.wikimedia.org/wiki/File:Swords10.jpg), [The Star](https://commons.wikimedia.org/wiki/File:The_Star,_Waite-Smith_Tarot_Deck,_Yale_University.jpg), and Yale University Library scan of the [Queen of Cups](https://commons.wikimedia.org/wiki/File:Queen_of_Cups,_Waite-Smith_Tarot_Deck,_Yale_University.jpg). The repository copies visually match that 1909 deck, although their original download URLs were not recorded in the repo.
+
+Production now has exactly 78 fixed JPEGs under `public/cards/`, with a stable one-to-one `/cards/<card-id>.jpeg` mapping. `scripts/generate-tarot-card-assets.ts` copies the retained source files and normalizes reader-facing Chinese names; it does not synthesize art. The prior abstract SVG deck is preserved under `legacy/assets/generated-symbol-deck/` and is not referenced by production. The UI retains a CSS fallback card visual, so an image loading failure does not remove a card from the draw pool.
+
+The provided card-back photograph and visual board informed atmosphere and palette only. They were not copied into the production card faces. The cinematic hero background is an original generated scene without embedded text, logos, or card artwork.
 
 ## Retained material
 
@@ -46,6 +50,7 @@ Decision: retain every original file under `legacy/assets/cards/`, but do not co
 - Clean remote demo notebook under `research/`.
 - Original JSON files under `legacy/data/`.
 - All original JPEGs under `legacy/assets/cards/`.
+- Previous abstract SVG deck under `legacy/assets/generated-symbol-deck/`.
 - Previous YouTube demo link in the README legacy section.
 
 ## Excluded from production
