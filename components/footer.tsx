@@ -3,7 +3,13 @@ import Image from "next/image";
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div className="footer-brand">
+      <a
+        className="footer-brand"
+        href="https://timeflow.tw"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="前往 Timeflow 時序官網"
+      >
         <Image
           className="timeflow-logo"
           src="/timeflow-logo.png"
@@ -16,7 +22,7 @@ export function Footer() {
           <strong>Timeflow 時序</strong>
           <p>預約與數位營運系統</p>
         </div>
-      </div>
+      </a>
       <div className="footer-links" aria-label="Timeflow 連結">
         <a href="https://timeflow.tw" target="_blank" rel="noreferrer">
           timeflow.tw

@@ -22,6 +22,20 @@ if (missingLegacyImages.length > 0) {
   );
 }
 
+const missingProductionImages = tarotCards.filter(
+  (card) =>
+    card.image === null ||
+    card.image !== `/cards/${card.id}.svg` ||
+    !existsSync(resolve("public", card.image.slice(1))),
+);
+if (missingProductionImages.length > 0) {
+  throw new Error(
+    `Missing or inconsistent production image mappings: ${missingProductionImages
+      .map((card) => `${card.id} -> ${card.image ?? "fallback"}`)
+      .join(", ")}`,
+  );
+}
+
 if (tarotCardIds.length !== 78 || tarotCardMap.size !== 78) {
   throw new Error("The production draw pool must contain exactly 78 unique cards.");
 }
@@ -31,5 +45,7 @@ console.log(
     `${counts.major} Major; ${counts.minor} Minor; ` +
     `Cups ${counts.cups}; Pentacles ${counts.pentacles}; ` +
     `Swords ${counts.swords}; Wands ${counts.wands}; ` +
-    `draw pool ${tarotCardIds.length}; missing legacy images ${missingLegacyImages.length}.`,
+    `draw pool ${tarotCardIds.length}; production images ${tarotCards.length}; ` +
+    `missing production images ${missingProductionImages.length}; ` +
+    `missing legacy images ${missingLegacyImages.length}.`,
 );

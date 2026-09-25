@@ -2,9 +2,7 @@
 
 **LLM × Structured Knowledge Prototype by Timeflow**
 
-[Production：timeflow-ai-tarot.vercel.app](https://timeflow-ai-tarot.vercel.app)
-
-Planned custom domain: `ai-tarot.timeflow.tw`（等待 DNS CNAME 設定）
+[Production：ai-tarot.timeflow.tw](https://ai-tarot.timeflow.tw)
 
 一個以三張牌陣為核心的匿名互動式反思體驗。使用者提出問題後，系統會固定抽出三張不重複的牌與正逆位，再由伺服器端 AI 結合可信的結構化牌義、牌位與問題脈絡產生繁體中文解讀。
 
@@ -57,7 +55,9 @@ meaningUpright, meaningReversed, reflection, image, legacyImage
 - Minor Arcana：56 筆完整；權杖、聖杯、寶劍、錢幣各 14 筆。
 - 「寶劍 10 / Ten of Swords」已補入正式資料，包含正位、逆位、反思提示與既有 legacy image mapping。
 - 正式資料、server-side lookup 與瀏覽器抽牌候選池皆直接使用同一份 78 張 canonical dataset，沒有額外 filter。
-- Production UI 使用 CSS fallback card visual，因此不會因正式圖片欄位為空而排除任何牌。
+- `public/cards/` 內有 78 張原創固定 SVG 牌圖，每張透過 `image` 欄位一對一映射；正式環境不會在 runtime 生成圖片。
+- 牌圖由 `scripts/generate-tarot-card-assets.ts` 以同一份 canonical dataset 產生，可重現且沒有引用來源不明的網路圖片。
+- Production UI 保留 CSS fallback card visual，因此即使圖片載入異常，也不會從抽牌候選池移除任何牌。
 - 舊 repo 有 78 張一致的 Rider–Waite–Smith 風格 JPEG，但未附足以確認正式使用權利的來源／授權文件，因此新版 UI 使用自製抽象牌面；原圖只保留在 `legacy/assets/cards/`，不會由正式頁面載入。
 
 完整稽核記錄見 [`docs/source-audit.md`](docs/source-audit.md)。
@@ -134,7 +134,7 @@ npm run build
 
 ## Asset attribution
 
-舊版圖片檔名與風格顯示為 1909 Rider–Waite–Smith deck，但 repo 沒有包含完整的來源 URL 或授權證明。這些檔案被視為 legacy/demo assets；本專案不對其商業使用權作保證，新版正式 UI 也不使用它們。
+舊版圖片檔名與風格顯示為 1909 Rider–Waite–Smith deck，但 repo 沒有包含完整的來源 URL 或授權證明。這些檔案被視為 legacy/demo assets；本專案不對其商業使用權作保證，新版正式 UI 也不使用它們。正式牌組為本專案原創的 78 張程式化向量圖，參考素材只用於氣氛與配色方向，未直接納入網頁資產。
 
 ---
 

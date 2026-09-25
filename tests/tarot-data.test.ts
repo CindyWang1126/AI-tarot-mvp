@@ -52,9 +52,16 @@ describe("canonical Tarot knowledge", () => {
     ).toBe(true);
   });
 
-  it("maps every card to an existing legacy image or the production fallback", () => {
+  it("maps every card to its fixed production asset and retains the legacy audit path", () => {
     expect(tarotCards.every((card) => existsSync(resolve(card.legacyImage)))).toBe(true);
-    expect(tarotCards.every((card) => card.image === null)).toBe(true);
+    expect(
+      tarotCards.every(
+        (card) =>
+          card.image !== null &&
+          card.image === `/cards/${card.id}.svg` &&
+          existsSync(resolve("public", card.image.slice(1))),
+      ),
+    ).toBe(true);
   });
 });
 

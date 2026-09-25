@@ -7,7 +7,7 @@ const siteUrl = new URL(
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: "AI Tarot｜三張牌的互動反思體驗｜Timeflow",
+  title: "AI Tarot Interactive Experience｜Timeflow",
   description:
     "留下一個問題，從三張牌裡看見另一種理解。由 AI 結合牌義、位置與問題脈絡，陪您整理當下的想法。",
   alternates: { canonical: "/" },

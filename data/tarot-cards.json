@@ -14,7 +14,7 @@
     "meaningUpright": "新的開始、自由、冒險。",
     "meaningReversed": "魯莽、逃避現實、缺乏準備。",
     "reflection": "當「新的開始」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-00-fool.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_00_Fool.jpeg"
   },
   {
@@ -31,7 +31,7 @@
     "meaningUpright": "掌握機會、展現才能。",
     "meaningReversed": "欺騙、錯失機會、操控。",
     "reflection": "當「掌握機會」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-01-magician.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_01_Magician.jpeg"
   },
   {
@@ -49,7 +49,7 @@
     "meaningUpright": "直覺、神秘、潛意識。",
     "meaningReversed": "封閉、疑慮、缺乏理解。",
     "reflection": "當「直覺」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-02-high-priestess.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_02_High_Priestess.jpeg"
   },
   {
@@ -67,7 +67,7 @@
     "meaningUpright": "豐饒、關愛、創造力。",
     "meaningReversed": "依賴、過度溺愛、停滯。",
     "reflection": "當「豐饒」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-03-empress.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_03_Empress.jpeg"
   },
   {
@@ -85,7 +85,7 @@
     "meaningUpright": "穩定、權威、結構。",
     "meaningReversed": "固執、濫權、控制欲。",
     "reflection": "當「穩定」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-04-emperor.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_04_Emperor.jpeg"
   },
   {
@@ -103,7 +103,7 @@
     "meaningUpright": "傳統、信仰、精神導師。",
     "meaningReversed": "僵化、叛逆、虛偽。",
     "reflection": "當「傳統」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-05-hierophant.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_05_Hierophant.jpeg"
   },
   {
@@ -121,7 +121,7 @@
     "meaningUpright": "愛情、選擇、靈魂契合。",
     "meaningReversed": "分離、衝突、誘惑。",
     "reflection": "當「愛情」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-06-lovers.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_06_Lovers.jpeg"
   },
   {
@@ -139,7 +139,7 @@
     "meaningUpright": "意志力、勝利、前進。",
     "meaningReversed": "失控、方向迷失、壓抑。",
     "reflection": "當「意志力」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-07-chariot.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_07_Chariot.jpeg"
   },
   {
@@ -157,7 +157,7 @@
     "meaningUpright": "內在力量、勇氣、耐心。",
     "meaningReversed": "軟弱、自我懷疑、怒氣。",
     "reflection": "當「內在力量」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-08-strength.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_08_Strength.jpeg"
   },
   {
@@ -175,7 +175,7 @@
     "meaningUpright": "內省、尋找真理、靜思。",
     "meaningReversed": "孤立、封閉、逃避現實。",
     "reflection": "當「內省」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-09-hermit.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_09_Hermit.jpeg"
   },
   {
@@ -193,7 +193,7 @@
     "meaningUpright": "轉機、命運、循環。",
     "meaningReversed": "厄運、停滯、反覆。",
     "reflection": "當「轉機」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-10-wheel-of-fortune.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_10_Wheel_of_Fortune.jpeg"
   },
   {
@@ -211,7 +211,7 @@
     "meaningUpright": "公平、因果、誠實。",
     "meaningReversed": "不公、偏頗、逃避責任。",
     "reflection": "當「公平」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-11-justice.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_11_Justice.jpeg"
   },
   {
@@ -229,7 +229,7 @@
     "meaningUpright": "犧牲、轉變觀點、停頓。",
     "meaningReversed": "拖延、抗拒、無意義的犧牲。",
     "reflection": "當「犧牲」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-12-hanged-man.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_12_Hanged_Man.jpeg"
   },
   {
@@ -247,7 +247,7 @@
     "meaningUpright": "結束與重生、蛻變、放下。",
     "meaningReversed": "抗拒改變、延遲、停滯。",
     "reflection": "當「結束與重生」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-13-death.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_13_Death.jpeg"
   },
   {
@@ -265,7 +265,7 @@
     "meaningUpright": "平衡、和諧、節制。",
     "meaningReversed": "極端、失控、失衡。",
     "reflection": "當「平衡」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-14-temperance.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_14_Temperance.jpeg"
   },
   {
@@ -283,7 +283,7 @@
     "meaningUpright": "束縛、誘惑、慾望。",
     "meaningReversed": "解脫、自省、面對陰影。",
     "reflection": "當「束縛」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-15-devil.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_15_Devil.jpeg"
   },
   {
@@ -301,7 +301,7 @@
     "meaningUpright": "突變、毀壞、衝擊真相。",
     "meaningReversed": "災後重建、釋放壓力。",
     "reflection": "當「突變」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-16-tower.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_16_Tower.jpeg"
   },
   {
@@ -319,7 +319,7 @@
     "meaningUpright": "希望、療癒、靈感。",
     "meaningReversed": "幻滅、失望、缺乏信念。",
     "reflection": "當「希望」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-17-star.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_17_Star.jpeg"
   },
   {
@@ -337,7 +337,7 @@
     "meaningUpright": "潛意識、迷惘、夢境。",
     "meaningReversed": "清晰、謊言揭露、面對恐懼。",
     "reflection": "當「潛意識」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-18-moon.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_18_Moon.jpeg"
   },
   {
@@ -355,7 +355,7 @@
     "meaningUpright": "成功、快樂、能量。",
     "meaningReversed": "自滿、延遲、表象快樂。",
     "reflection": "當「成功」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-19-sun.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_19_Sun.jpeg"
   },
   {
@@ -373,7 +373,7 @@
     "meaningUpright": "覺醒、反思、重生。",
     "meaningReversed": "逃避審視、自責、誤判。",
     "reflection": "當「覺醒」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-20-judgement.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_20_Judgement.jpeg"
   },
   {
@@ -391,7 +391,7 @@
     "meaningUpright": "完成、圓滿、整合。",
     "meaningReversed": "未完成、缺口、封閉循環。",
     "reflection": "當「完成」成為線索，現在最值得重新看見的是什麼？",
-    "image": null,
+    "image": "/cards/major-21-world.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_21_World.jpeg"
   },
   {
@@ -408,7 +408,7 @@
     "meaningUpright": "情感的開始、愛與喜悅。",
     "meaningReversed": "情感壓抑、失落、關係停滯。",
     "reflection": "當「情感的開始」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-01-ace.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_01.jpeg"
   },
   {
@@ -426,7 +426,7 @@
     "meaningUpright": "聯合、夥伴關係、感情交流。",
     "meaningReversed": "分歧、誤會、不對等的關係。",
     "reflection": "當「聯合」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-02-two.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_02.jpeg"
   },
   {
@@ -444,7 +444,7 @@
     "meaningUpright": "情感交流擴展、共享喜悅、社交圈凝聚",
     "meaningReversed": "過度依附他人、虛假和諧、情緒流於表面",
     "reflection": "當「情感交流擴展」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-03-three.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_03.jpeg"
   },
   {
@@ -462,7 +462,7 @@
     "meaningUpright": "情緒退縮、缺乏動力、對現況感到無趣",
     "meaningReversed": "情緒冷漠轉變、關注內在聲音、準備迎接轉變",
     "reflection": "當「情緒退縮」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-04-four.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_04.jpeg"
   },
   {
@@ -480,7 +480,7 @@
     "meaningUpright": "失落感浮現、對過去感到懊悔、難以釋懷",
     "meaningReversed": "悲傷逐漸釋放、情感重新整合、回顧中看見剩餘",
     "reflection": "當「失落感浮現」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-05-five.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_05.jpeg"
   },
   {
@@ -498,7 +498,7 @@
     "meaningUpright": "過去連結、童年記憶、情感懷舊",
     "meaningReversed": "沉溺回憶、停滯不前、情感不成熟",
     "reflection": "當「過去連結」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-06-six.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_06.jpeg"
   },
   {
@@ -516,7 +516,7 @@
     "meaningUpright": "幻想過多、選擇混亂、情感投射",
     "meaningReversed": "看清現實、情緒收斂、開始聚焦方向",
     "reflection": "當「幻想過多」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-07-seven.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_07.jpeg"
   },
   {
@@ -534,7 +534,7 @@
     "meaningUpright": "主動抽離、轉身離開、尋求更深層意義",
     "meaningReversed": "情緒困住、難以放手、壓抑的轉變需求",
     "reflection": "當「主動抽離」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-08-eight.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_08.jpeg"
   },
   {
@@ -552,7 +552,7 @@
     "meaningUpright": "心願滿足、內在圓滿、享受當下成果",
     "meaningReversed": "滿足表象化、自我沉迷、忽視他人需求",
     "reflection": "當「心願滿足」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-09-nine.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_09.jpeg"
   },
   {
@@ -570,7 +570,7 @@
     "meaningUpright": "情感圓滿、關係和諧、家族共融",
     "meaningReversed": "表面和諧、情感依賴、情緒過度理想化",
     "reflection": "當「情感圓滿」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-10-ten.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_10.jpeg"
   },
   {
@@ -588,7 +588,7 @@
     "meaningUpright": "情感覺醒、靈感湧現、內心溫柔細膩",
     "meaningReversed": "情緒過敏、逃避現實、缺乏情緒界線",
     "reflection": "當「情感覺醒」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-11-page.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_11.jpeg"
   },
   {
@@ -606,7 +606,7 @@
     "meaningUpright": "溫柔追求、浪漫行動、情感主導決策",
     "meaningReversed": "情緒搖擺、幻想過多、難以付諸實際",
     "reflection": "當「溫柔追求」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-12-knight.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_12.jpeg"
   },
   {
@@ -624,7 +624,7 @@
     "meaningUpright": "情感豐沛、深具共感力、療癒氛圍濃厚",
     "meaningReversed": "情緒勒索、過度吸納他人情緒、難以劃界",
     "reflection": "當「情感豐沛」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-13-queen.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_13.jpeg"
   },
   {
@@ -642,7 +642,7 @@
     "meaningUpright": "內斂成熟、情緒穩重、善於理解與承接",
     "meaningReversed": "情緒壓抑、逃避表達、難以建立親密",
     "reflection": "當「內斂成熟」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/cups-14-king.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Cups_14.jpeg"
   },
   {
@@ -660,7 +660,7 @@
     "meaningUpright": "穩定機會、物質基礎啟動、安全感萌芽",
     "meaningReversed": "感覺停滯、資源未運用、對進展缺乏耐性",
     "reflection": "當「穩定機會」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-01-ace.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_01.jpeg"
   },
   {
@@ -678,7 +678,7 @@
     "meaningUpright": "資源調配、靈活應對現實、不斷平衡生活",
     "meaningReversed": "多重壓力失衡、過度應對造成混亂",
     "reflection": "當「資源調配」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-02-two.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_02.jpeg"
   },
   {
@@ -696,7 +696,7 @@
     "meaningUpright": "技能合作、價值建構、學習成長",
     "meaningReversed": "合作停滯、自我懷疑、無法展現價值",
     "reflection": "當「技能合作」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-03-three.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_03.jpeg"
   },
   {
@@ -714,7 +714,7 @@
     "meaningUpright": "控制資源、保護所有、固守現狀",
     "meaningReversed": "過度執著、封閉守財、安全感過度依賴",
     "reflection": "當「控制資源」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-04-four.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_04.jpeg"
   },
   {
@@ -732,7 +732,7 @@
     "meaningUpright": "物質匱乏、孤單無助、支持缺席",
     "meaningReversed": "轉向內在支持、逆境中學會接納協助",
     "reflection": "當「物質匱乏」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-05-five.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_05.jpeg"
   },
   {
@@ -750,7 +750,7 @@
     "meaningUpright": "資源流動、施與受平衡、價值交換",
     "meaningReversed": "不對等關係、付出失衡、過度依賴他人",
     "reflection": "當「資源流動」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-06-six.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_06.jpeg"
   },
   {
@@ -768,7 +768,7 @@
     "meaningUpright": "等待結果、階段評估、慢工出細活",
     "meaningReversed": "缺乏耐性、對進度不滿、努力感到枯竭",
     "reflection": "當「等待結果」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-07-seven.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_07.jpeg"
   },
   {
@@ -786,7 +786,7 @@
     "meaningUpright": "專注投入、持續學習、技術精進",
     "meaningReversed": "學習疲乏、精力耗盡、對目標失焦",
     "reflection": "當「專注投入」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-08-eight.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_08.jpeg"
   },
   {
@@ -804,7 +804,7 @@
     "meaningUpright": "獨立成就、享受成果、自我價值確認",
     "meaningReversed": "外在豐盛但內心空虛、過度依賴物質",
     "reflection": "當「獨立成就」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-09-nine.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_09.jpeg"
   },
   {
@@ -822,7 +822,7 @@
     "meaningUpright": "家族資產、長期穩定、傳承與成果累積",
     "meaningReversed": "價值觀衝突、家族壓力、無法感受歸屬",
     "reflection": "當「家族資產」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-10-ten.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_10.jpeg"
   },
   {
@@ -840,7 +840,7 @@
     "meaningUpright": "實際入門、務實學習、價值逐步建立",
     "meaningReversed": "拖延觀望、缺乏主動、忽略基本責任",
     "reflection": "當「實際入門」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-11-page.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_11.jpeg"
   },
   {
@@ -858,7 +858,7 @@
     "meaningUpright": "持之以恆、腳踏實地、穩健投入",
     "meaningReversed": "固守既有方式、效率低落、缺乏彈性",
     "reflection": "當「持之以恆」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-12-knight.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_12.jpeg"
   },
   {
@@ -876,7 +876,7 @@
     "meaningUpright": "實際照料、資源管理、創造舒適與穩定",
     "meaningReversed": "過度照顧他人、忽略自身需求、情感與金錢混淆",
     "reflection": "當「實際照料」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-13-queen.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_13.jpeg"
   },
   {
@@ -894,7 +894,7 @@
     "meaningUpright": "財務穩固、善於管理、重視長期建設",
     "meaningReversed": "物質過度執著、壓抑情感、控制慾過強",
     "reflection": "當「財務穩固」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/pentacles-14-king.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Pentacles_14.jpeg"
   },
   {
@@ -912,7 +912,7 @@
     "meaningUpright": "決斷出現、真理揭示、清晰思維",
     "meaningReversed": "意識混亂、判斷偏差、理性短路",
     "reflection": "當「決斷出現」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-01-ace.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_01.jpeg"
   },
   {
@@ -930,7 +930,7 @@
     "meaningUpright": "內外平衡、理性與直覺拉鋸、選擇中立",
     "meaningReversed": "決策卡住、信息遮蔽、過於理智無感",
     "reflection": "當「內外平衡」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-02-two.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_02.jpeg"
   },
   {
@@ -948,7 +948,7 @@
     "meaningUpright": "心碎刺痛、情感創傷、真相令人痛苦",
     "meaningReversed": "創傷療癒中、內在仍受影響、情緒未解",
     "reflection": "當「心碎刺痛」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-03-three.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_03.jpeg"
   },
   {
@@ -966,7 +966,7 @@
     "meaningUpright": "靜止休息、內在沉澱、暫時抽離",
     "meaningReversed": "無法休息、心思過度、身心緊繃",
     "reflection": "當「靜止休息」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-04-four.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_04.jpeg"
   },
   {
@@ -984,7 +984,7 @@
     "meaningUpright": "輸贏之爭、自利衝突、不計代價的勝利",
     "meaningReversed": "勝利不安、關係疏離、自我質疑",
     "reflection": "當「輸贏之爭」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-05-five.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_05.jpeg"
   },
   {
@@ -1002,7 +1002,7 @@
     "meaningUpright": "脫離混亂、過渡時期、尋求內在平靜",
     "meaningReversed": "拖延轉變、逃避現實、陷入無方向的漂浮",
     "reflection": "當「脫離混亂」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-06-six.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_06.jpeg"
   },
   {
@@ -1020,7 +1020,7 @@
     "meaningUpright": "心懷鬼胎、秘密行動、策略隱藏",
     "meaningReversed": "計謀失敗、謊言揭露、自我欺瞞",
     "reflection": "當「心懷鬼胎」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-07-seven.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_07.jpeg"
   },
   {
@@ -1038,7 +1038,7 @@
     "meaningUpright": "受困焦慮、思維綁架、感覺被困住",
     "meaningReversed": "限制開始鬆動、思維突破口出現、內在鬆綁",
     "reflection": "當「受困焦慮」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-08-eight.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_08.jpeg"
   },
   {
@@ -1056,7 +1056,7 @@
     "meaningUpright": "深夜焦慮、無法入眠、自我折磨",
     "meaningReversed": "恐懼開始釋放、內在呼救、焦慮接近轉化",
     "reflection": "當「深夜焦慮」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-09-nine.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_09.jpeg"
   },
   {
@@ -1074,7 +1074,7 @@
     "meaningUpright": "階段徹底結束、面對難以迴避的結果、在低點準備重啟",
     "meaningReversed": "逐步走出低谷、抗拒必要的結束、舊傷仍待整理",
     "reflection": "當「階段徹底結束」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-10-ten.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_10.jpeg"
   },
   {
@@ -1092,7 +1092,7 @@
     "meaningUpright": "觀察敏銳、思維活躍、資訊探索者",
     "meaningReversed": "過度好奇、話語衝動、言語造成誤傷",
     "reflection": "當「觀察敏銳」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-11-page.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_11.jpeg"
   },
   {
@@ -1110,7 +1110,7 @@
     "meaningUpright": "行動迅速、邏輯明確、直攻核心",
     "meaningReversed": "思緒過速導致錯失、語言尖銳、忽略後果",
     "reflection": "當「行動迅速」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-12-knight.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_12.jpeg"
   },
   {
@@ -1128,7 +1128,7 @@
     "meaningUpright": "理性清晰、獨立堅定、善於斷捨離",
     "meaningReversed": "過度冷靜、拒絕溝通、情感與邏輯分離",
     "reflection": "當「理性清晰」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-13-queen.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_13.jpeg"
   },
   {
@@ -1146,7 +1146,7 @@
     "meaningUpright": "洞察犀利、善於策略規劃、權威發聲",
     "meaningReversed": "決策獨斷、缺乏共情、過度控制資訊",
     "reflection": "當「洞察犀利」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/swords-14-king.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Swords_14.jpeg"
   },
   {
@@ -1164,7 +1164,7 @@
     "meaningUpright": "創意爆發、熱情啟動、新計畫開端",
     "meaningReversed": "能量難落地、方向模糊、激情耗散",
     "reflection": "當「創意爆發」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-01-ace.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_01.jpeg"
   },
   {
@@ -1182,7 +1182,7 @@
     "meaningUpright": "願景擴張、行動計畫初生、探索未來可能",
     "meaningReversed": "決策猶豫、計畫受阻、動能分散",
     "reflection": "當「願景擴張」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-02-two.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_02.jpeg"
   },
   {
@@ -1200,7 +1200,7 @@
     "meaningUpright": "視野拓展、創業合作、準備實踐藍圖",
     "meaningReversed": "計劃延誤、行動卡關、對未來感到不確定",
     "reflection": "當「視野拓展」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-03-three.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_03.jpeg"
   },
   {
@@ -1218,7 +1218,7 @@
     "meaningUpright": "穩定落實、慶祝成功、社群建立",
     "meaningReversed": "承諾動搖、安逸停滯、外在和諧內在不穩",
     "reflection": "當「穩定落實」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-04-four.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_04.jpeg"
   },
   {
@@ -1236,7 +1236,7 @@
     "meaningUpright": "競爭碰撞、理念衝突、行動不一致",
     "meaningReversed": "無謂內耗、分裂無共識、過度防衛",
     "reflection": "當「競爭碰撞」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-05-five.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_05.jpeg"
   },
   {
@@ -1254,7 +1254,7 @@
     "meaningUpright": "勝利顯現、公認成果、帶領他人",
     "meaningReversed": "自負膨脹、過度依賴掌聲、內在不安全感",
     "reflection": "當「勝利顯現」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-06-six.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_06.jpeg"
   },
   {
@@ -1272,7 +1272,7 @@
     "meaningUpright": "堅守立場、面對挑戰、防衛中成長",
     "meaningReversed": "立場搖擺、防衛過度、錯誤焦點",
     "reflection": "當「堅守立場」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-07-seven.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_07.jpeg"
   },
   {
@@ -1290,7 +1290,7 @@
     "meaningUpright": "迅速推進、溝通暢通、機會臨近",
     "meaningReversed": "進展延遲、訊息失焦、能量無法聚焦",
     "reflection": "當「迅速推進」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-08-eight.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_08.jpeg"
   },
   {
@@ -1308,7 +1308,7 @@
     "meaningUpright": "經驗累積、防範意識、歷經考驗仍堅持",
     "meaningReversed": "過度防備、疲憊警戒、不敢再信任",
     "reflection": "當「經驗累積」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-09-nine.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_09.jpeg"
   },
   {
@@ -1326,7 +1326,7 @@
     "meaningUpright": "責任承擔、壓力極限、承載過多",
     "meaningReversed": "無法放手、壓力壓頂、扛著不屬於自己的事",
     "reflection": "當「責任承擔」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-10-ten.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_10.jpeg"
   },
   {
@@ -1344,7 +1344,7 @@
     "meaningUpright": "創意萌芽、熱情探索、躍躍欲試的行動初心",
     "meaningReversed": "衝動未定、計劃不全、難以持續專注",
     "reflection": "當「創意萌芽」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-11-page.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_11.jpeg"
   },
   {
@@ -1362,7 +1362,7 @@
     "meaningUpright": "行動快速、野心燃燒、勇往直前",
     "meaningReversed": "能量分散、躁進失衡、忽略後果",
     "reflection": "當「行動快速」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-12-knight.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_12.jpeg"
   },
   {
@@ -1380,7 +1380,7 @@
     "meaningUpright": "自信外放、魅力十足、擅長引領與鼓舞",
     "meaningReversed": "掌控欲強、情緒浮動、容易過度主導",
     "reflection": "當「自信外放」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-13-queen.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_13.jpeg"
   },
   {
@@ -1398,7 +1398,7 @@
     "meaningUpright": "穩健果斷、具有遠見的領導者、願景清晰",
     "meaningReversed": "固執獨斷、忽略細節、拒絕他人意見",
     "reflection": "當「穩健果斷」成為線索，這個情境還能從哪個角度理解？",
-    "image": null,
+    "image": "/cards/wands-14-king.svg",
     "legacyImage": "legacy/assets/cards/RWS1909_-_Wands_14.jpeg"
   }
 ]

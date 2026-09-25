@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   categoryLabel,
   orientationLabel,
@@ -23,10 +24,11 @@ export function ReadingResult({
 
   return (
     <section className="result-shell" aria-labelledby="result-title">
+      <span className="result-arc" aria-hidden="true" />
       <div className="result-heading">
         <div>
-          <p className="eyebrow">YOUR READING</p>
-          <h2 id="result-title">這次的三張牌</h2>
+          <p className="eyebrow">THE READING UNFOLDS</p>
+          <h2 id="result-title">牌面之間，正在說什麼</h2>
         </div>
         <div className="result-actions">
           <button type="button" className="button ghost" onClick={onCopy}>
@@ -57,8 +59,21 @@ export function ReadingResult({
                 <span>0{index + 1}</span>
                 <span>{position.label}</span>
               </div>
-              <div className="mini-card-mark" aria-hidden="true">
-                <span>{card.arcana === "major" ? "✦" : "◇"}</span>
+              <div className="result-card-art" aria-hidden="true">
+                {card.image ? (
+                  <Image
+                    src={card.image}
+                    alt=""
+                    width={600}
+                    height={1000}
+                    sizes="150px"
+                    className={drawn.orientation === "reversed" ? "is-reversed" : ""}
+                  />
+                ) : (
+                  <span className="result-card-fallback">
+                    {card.arcana === "major" ? "✦" : "◇"}
+                  </span>
+                )}
               </div>
               <div className="card-title-row">
                 <div>
@@ -94,8 +109,8 @@ export function ReadingResult({
 
       <div className="advice-grid">
         <article>
-          <p className="section-label">可以帶走的幾個方向</p>
-          <h3>接下來，可以從這裡開始</h3>
+          <p className="section-label">AFTER THE READING</p>
+          <h3>把理解帶回生活裡</h3>
           <ol>
             {reading.result.actionAdvice.map((advice, index) => (
               <li key={advice}>
@@ -107,7 +122,7 @@ export function ReadingResult({
         </article>
         <aside className="reflection-panel">
           <span aria-hidden="true">?</span>
-          <p className="section-label">留給您的問題</p>
+          <p className="section-label">A QUESTION TO KEEP</p>
           <blockquote>{reading.result.reflectionQuestion}</blockquote>
         </aside>
       </div>

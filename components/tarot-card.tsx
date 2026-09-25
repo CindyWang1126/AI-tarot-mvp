@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   orientationLabel,
   spreadPositions,
@@ -52,27 +53,47 @@ export function TarotCardVisual({
         <span className="card-inner">
           <span className="card-back" aria-hidden={revealed}>
             <span className="card-back-frame">
-              <span className="orbit orbit-one" />
-              <span className="orbit orbit-two" />
-              <span className="orbit-core">T</span>
+              <span className="oracle-seal">
+                <span className="oracle-ring" />
+                <span className="oracle-hand" />
+                <span className="oracle-wave" />
+                <span className="oracle-star" />
+              </span>
             </span>
-            <span className="reveal-hint">點擊翻牌</span>
+            <span className="reveal-hint">輕觸揭開</span>
           </span>
           <span className="card-face" aria-hidden={!revealed}>
-            <span className="card-meta">
-              {card.arcana === "major" ? "MAJOR ARCANA" : "MINOR ARCANA"}
+            {card.image ? (
+              <Image
+                src={card.image}
+                alt=""
+                width={600}
+                height={1000}
+                sizes="(max-width: 768px) 78vw, 245px"
+                className={`card-art ${
+                  drawn.orientation === "reversed" ? "is-reversed" : ""
+                }`}
+              />
+            ) : (
+              <span className="card-art-fallback" aria-hidden="true">
+                <span className="card-meta">
+                  {card.arcana === "major" ? "MAJOR ARCANA" : "MINOR ARCANA"}
+                </span>
+                <span
+                  className={`card-symbol ${
+                    drawn.orientation === "reversed" ? "is-reversed" : ""
+                  }`}
+                >
+                  {symbol}
+                </span>
+                <span className="card-name-en">{card.name}</span>
+                <strong>{card.nameZh}</strong>
+              </span>
+            )}
+            <span className="card-face-caption">
+              <span>{card.nameZh}</span>
+              <span className="orientation-pill">{orientation}</span>
             </span>
-            <span
-              className={`card-symbol ${
-                drawn.orientation === "reversed" ? "is-reversed" : ""
-              }`}
-              aria-hidden="true"
-            >
-              {symbol}
-            </span>
-            <span className="card-name-en">{card.name}</span>
-            <strong>{card.nameZh}</strong>
-            <span className="orientation-pill">{orientation}</span>
           </span>
         </span>
       </button>

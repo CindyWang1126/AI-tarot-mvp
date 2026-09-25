@@ -251,26 +251,38 @@ export function TarotExperience() {
         <div className="hero-copy">
           <div className="eyebrow-row">
             <span />
-            <p>AI TAROT · INTERACTIVE REFLECTION</p>
+            <p>AI TAROT · A TIMEFLOW EXPERIENCE</p>
           </div>
           <h1>
-            留下一個問題，
+            問一個問題，
             <br />
-            <span className="hero-second-line">從三張牌裡，</span>
+            <span className="hero-second-line">抽三張牌，</span>
             <br />
-            <span className="hero-third-line">看見另一種理解。</span>
+            <span className="hero-third-line">看見另一個思考角度。</span>
           </h1>
           <p className="hero-lead">
-            抽取三張牌，讓 AI 結合牌義、位置與您的問題脈絡，整理出一段更貼近當下的理解與反思。
+            讓牌面映照此刻的情境，由 AI 協助梳理其中的線索。這不是預言，而是一段陪您重新觀看當下的閱讀。
           </p>
-          <p className="hero-meta">三張牌 · 無需登入 · 僅保留於此裝置</p>
+          <p className="hero-meta">三張牌 · 一次固定 · 安靜留在此刻</p>
         </div>
         <div className="hero-art" aria-hidden="true">
+          <div className="hero-radiance" />
+          <div className="hero-flow flow-a" />
+          <div className="hero-flow flow-b" />
           <div className="hero-orbit orbit-a" />
           <div className="hero-orbit orbit-b" />
-          <div className="hero-card hero-card-left"><span>Ⅰ</span></div>
-          <div className="hero-card hero-card-center"><span>Ⅱ</span></div>
-          <div className="hero-card hero-card-right"><span>Ⅲ</span></div>
+          <div className="hero-card hero-card-left">
+            <span className="hero-card-seal" />
+            <span className="hero-card-index">Ⅰ</span>
+          </div>
+          <div className="hero-card hero-card-center">
+            <span className="hero-card-seal" />
+            <span className="hero-card-index">Ⅱ</span>
+          </div>
+          <div className="hero-card hero-card-right">
+            <span className="hero-card-seal" />
+            <span className="hero-card-index">Ⅲ</span>
+          </div>
         </div>
       </section>
 
@@ -285,8 +297,8 @@ export function TarotExperience() {
               <div className="question-panel">
                 <div className="panel-heading">
                   <div>
-                    <p className="eyebrow">BEGIN WITH A QUESTION</p>
-                    <h2 id="experience-title">從一個問題開始。</h2>
+                    <p className="eyebrow">OPEN THE READING</p>
+                    <h2 id="experience-title">把此刻想問的，留在這裡。</h2>
                   </div>
                   <span className="step-indicator">01 / 03</span>
                 </div>
@@ -336,7 +348,7 @@ export function TarotExperience() {
                       onClick={prepareQuestion}
                       disabled={!question.trim()}
                     >
-                      確認並繼續 <span aria-hidden="true">→</span>
+                      進入這次解讀 <span aria-hidden="true">→</span>
                     </button>
                   </>
                 ) : (
@@ -357,7 +369,7 @@ export function TarotExperience() {
                         className="button primary"
                         onClick={() => void drawCards()}
                       >
-                        抽取三張牌 <span aria-hidden="true">→</span>
+                        開始抽牌 <span aria-hidden="true">→</span>
                       </button>
                     </div>
                   </div>
@@ -370,9 +382,9 @@ export function TarotExperience() {
                 <div className="shuffle-stack" aria-hidden="true">
                   <span /><span /><span />
                 </div>
-                <p className="eyebrow">SHUFFLING</p>
-                <h2>正在為這次問題洗牌…</h2>
-                <p>稍後抽出的三張牌，會陪您展開這次閱讀。</p>
+                <p className="eyebrow">THE CARDS ARE TURNING</p>
+                <h2>讓問題安靜一下，牌正在就位…</h2>
+                <p>稍後揭開的三張牌，會沿著同一個問題展開。</p>
               </div>
             )}
 
@@ -382,7 +394,7 @@ export function TarotExperience() {
                   <div>
                     <p className="eyebrow">YOUR THREE CARDS</p>
                     <h2 id="cards-title">
-                      {revealedCount < 3 ? "依序翻開這次的三張牌" : "三張牌已經抽出。"}
+                      {revealedCount < 3 ? "依序翻開這次的三張牌" : "牌面已經展開。"}
                     </h2>
                   </div>
                   <div className="step-actions">
@@ -419,8 +431,8 @@ export function TarotExperience() {
                   <div className="generation-state" role="status" aria-live="polite">
                     <span className="generation-pulse" aria-hidden="true" />
                     <div>
-                      <strong>正在整理三張牌的關係…</strong>
-                      <p>解讀會沿用這次的牌面，不會重新抽牌。</p>
+                      <strong>正在梳理牌與牌之間的線索…</strong>
+                      <p>這次解讀會沿用眼前的牌面，不會重新抽牌。</p>
                     </div>
                   </div>
                 )}
@@ -436,7 +448,7 @@ export function TarotExperience() {
                       className="button secondary"
                       onClick={retryReading}
                     >
-                      用原本的牌再試一次
+                      使用原牌重新解讀
                     </button>
                   </div>
                 )}
@@ -457,13 +469,13 @@ export function TarotExperience() {
 
       <section className="how-it-works" id="how-it-works">
         <div>
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>不是尋找答案，而是換一個角度整理當下。</h2>
+          <p className="eyebrow">THE READING RITUAL</p>
+          <h2>讓問題停下來，讓三張牌慢慢展開。</h2>
         </div>
         <ol>
-          <li><span>01</span><strong>提出問題</strong><p>把注意力放在此刻真正想釐清的事情。</p></li>
-          <li><span>02</span><strong>抽取三張牌</strong><p>三張牌與正逆位會在抽取後固定，陪您展開這次閱讀。</p></li>
-          <li><span>03</span><strong>展開解讀</strong><p>從牌義、位置與問題之間，整理出新的線索與思考角度。</p></li>
+          <li><span>01</span><strong>留下問題</strong><p>把注意力放回此刻，寫下真正想釐清的情境。</p></li>
+          <li><span>02</span><strong>揭開三張牌</strong><p>牌面與正逆位在抽取後固定，依序展開閱讀的節奏。</p></li>
+          <li><span>03</span><strong>看見新的線索</strong><p>從牌義、位置與問題之間，整理出另一個可供思考的角度。</p></li>
         </ol>
       </section>
 

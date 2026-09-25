@@ -38,7 +38,7 @@ Production completeness remediation (2026-09-26): the missing card was added dir
 - Naming and visual proportions are consistent; the source-data mapping is complete except that `RWS1909_-_Swords_10.jpeg` has no knowledge record.
 - The repo does not include a source URL, license text, or commercial-use proof for the files.
 
-Decision: retain every original file under `legacy/assets/cards/`, but do not copy or load them in the production web UI. The production card front and back are original CSS geometry using midnight navy, silver, and ice-blue motifs.
+Decision: retain every original file under `legacy/assets/cards/`, but do not copy or load them in the production web UI. Production uses 78 original, deterministic SVG artworks under `public/cards/`, generated from the canonical card records by `scripts/generate-tarot-card-assets.ts`. Each asset has a stable one-to-one `/cards/<card-id>.svg` mapping, while the UI retains an abstract CSS fallback so image failure never removes a draw candidate. The provided photographs and visual board informed atmosphere and palette only; no pixels or third-party card artwork were incorporated into production assets.
 
 ## Retained material
 
