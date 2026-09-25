@@ -26,7 +26,7 @@ export function ReadingResult({
       <div className="result-heading">
         <div>
           <p className="eyebrow">YOUR READING</p>
-          <h2 id="result-title">另一個思考角度</h2>
+          <h2 id="result-title">這次的三張牌</h2>
         </div>
         <div className="result-actions">
           <button type="button" className="button ghost" onClick={onCopy}>
@@ -81,8 +81,8 @@ export function ReadingResult({
 
       <div className="analysis-grid">
         <article className="analysis-panel">
-          <p className="section-label">三牌關係</p>
-          <h3>脈絡、張力與發展</h3>
+          <p className="section-label">牌與牌之間</p>
+          <h3>脈絡、張力與新的線索</h3>
           <p>{reading.result.relationship}</p>
         </article>
         <article className="analysis-panel emphasis">
@@ -94,7 +94,7 @@ export function ReadingResult({
 
       <div className="advice-grid">
         <article>
-          <p className="section-label">行動建議</p>
+          <p className="section-label">可以帶走的幾個方向</p>
           <h3>接下來，可以從這裡開始</h3>
           <ol>
             {reading.result.actionAdvice.map((advice, index) => (
@@ -107,7 +107,7 @@ export function ReadingResult({
         </article>
         <aside className="reflection-panel">
           <span aria-hidden="true">?</span>
-          <p className="section-label">反思問題</p>
+          <p className="section-label">留給您的問題</p>
           <blockquote>{reading.result.reflectionQuestion}</blockquote>
         </aside>
       </div>

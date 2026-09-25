@@ -7,9 +7,9 @@ const siteUrl = new URL(
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: "AI Tarot Interactive Experience｜Timeflow",
+  title: "AI Tarot｜三張牌的互動反思體驗｜Timeflow",
   description:
-    "一個結合 AI 與結構化塔羅知識的互動式反思體驗，以三張牌整理問題脈絡、行動方向與值得思考的下一步。",
+    "留下一個問題，從三張牌裡看見另一種理解。由 AI 結合牌義、位置與問題脈絡，陪您整理當下的想法。",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   icons: { icon: "/icon.svg" },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     locale: "zh_TW",
     url: "/",
     siteName: "AI Tarot",
-    title: "AI Tarot Interactive Experience｜Timeflow",
-    description: "AI × Structured Tarot Knowledge 的互動式反思體驗。",
+    title: "AI Tarot｜三張牌的互動反思體驗",
+    description: "留下一個問題，從三張牌裡看見另一種理解。",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Tarot Interactive Experience｜Timeflow",
-    description: "問一個問題，抽三張牌，看見另一個思考角度。",
+    title: "AI Tarot｜三張牌的互動反思體驗",
+    description: "留下一個問題，從三張牌裡看見另一種理解。",
     images: ["/opengraph-image"],
   },
 };

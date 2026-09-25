@@ -108,7 +108,7 @@ export function TarotExperience() {
         const apiError = payload as ApiError;
         throw new Error(
           apiError.error?.message ||
-            "這次解讀暫時沒有完成，請使用原本的三張牌重新解讀。",
+            "解讀暫時沒有完成，您可以用原本的三張牌再試一次。",
         );
       }
 
@@ -119,7 +119,7 @@ export function TarotExperience() {
         !parsedResult.success ||
         !resultMatchesDraw(parsedResult.data, currentReading)
       ) {
-        throw new Error("解讀內容未通過一致性驗證，請重新解讀。");
+        throw new Error("解讀暫時沒有完成，您可以用原本的三張牌再試一次。");
       }
 
       const completedReading: StoredReading = {
@@ -133,7 +133,7 @@ export function TarotExperience() {
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : "這次解讀暫時沒有完成，請使用原本的三張牌重新解讀。",
+          : "解讀暫時沒有完成，您可以用原本的三張牌再試一次。",
       );
       setPhase("error");
     } finally {
@@ -152,7 +152,7 @@ export function TarotExperience() {
   function prepareQuestion() {
     const normalizedQuestion = question.trim();
     if (!normalizedQuestion) {
-      setErrorMessage("請先輸入想探索的問題。");
+      setErrorMessage("請先寫下此刻想釐清的問題。");
       return;
     }
     setQuestion(normalizedQuestion);
@@ -219,7 +219,7 @@ export function TarotExperience() {
       .map((item, index) => `${index + 1}. ${item}`)
       .join("\n");
     const text = [
-      "AI Tarot Interactive Reflection Experience",
+      "AI Tarot · Interactive Reflection",
       `問題：${reading.question}`,
       `分類：${categoryLabel(reading.category)}`,
       "",
@@ -227,7 +227,7 @@ export function TarotExperience() {
       "",
       `整體解讀：${reading.result.overallReading}`,
       "",
-      "行動建議：",
+      "可以帶走的方向：",
       advice,
       "",
       "本內容僅供反思與娛樂用途。",
@@ -251,23 +251,19 @@ export function TarotExperience() {
         <div className="hero-copy">
           <div className="eyebrow-row">
             <span />
-            <p>AI × STRUCTURED TAROT KNOWLEDGE</p>
+            <p>AI TAROT · INTERACTIVE REFLECTION</p>
           </div>
           <h1>
-            問一個問題，
+            留下一個問題，
             <br />
-            <span className="hero-second-line">
-              看見另一個<span className="mobile-break"><br /></span>思考角度。
-            </span>
+            <span className="hero-second-line">從三張牌裡，</span>
+            <br />
+            <span className="hero-third-line">看見另一種理解。</span>
           </h1>
           <p className="hero-lead">
-            抽取三張牌，由 AI 結合結構化牌義與問題脈絡，整理出一段清楚、連貫且不武斷的自我反思。
+            抽取三張牌，讓 AI 結合牌義、位置與您的問題脈絡，整理出一段更貼近當下的理解與反思。
           </p>
-          <div className="hero-meta">
-            <span>03-CARD SPREAD</span>
-            <span>PRIVATE BY DEFAULT</span>
-            <span>NO SIGN-IN</span>
-          </div>
+          <p className="hero-meta">三張牌 · 無需登入 · 僅保留於此裝置</p>
         </div>
         <div className="hero-art" aria-hidden="true">
           <div className="hero-orbit orbit-a" />
@@ -289,8 +285,8 @@ export function TarotExperience() {
               <div className="question-panel">
                 <div className="panel-heading">
                   <div>
-                    <p className="eyebrow">BEGIN YOUR READING</p>
-                    <h2 id="experience-title">想探索什麼？</h2>
+                    <p className="eyebrow">BEGIN WITH A QUESTION</p>
+                    <h2 id="experience-title">從一個問題開始。</h2>
                   </div>
                   <span className="step-indicator">01 / 03</span>
                 </div>
@@ -315,7 +311,7 @@ export function TarotExperience() {
                       }}
                     />
                     <fieldset className="category-fieldset">
-                      <legend>選擇問題類型</legend>
+                      <legend>這個問題比較接近哪個面向？</legend>
                       <div className="category-grid">
                         {categories.map((item) => (
                           <label key={item.value}>
@@ -340,14 +336,14 @@ export function TarotExperience() {
                       onClick={prepareQuestion}
                       disabled={!question.trim()}
                     >
-                      確認問題 <span aria-hidden="true">→</span>
+                      確認並繼續 <span aria-hidden="true">→</span>
                     </button>
                   </>
                 ) : (
                   <div className="confirmation-card">
                     <span>{categoryLabel(category)}</span>
                     <blockquote>「{question}」</blockquote>
-                    <p>問題確認後，會一次固定抽出三張不重複的牌與正逆位。</p>
+                    <p>確認後，三張牌與正逆位會固定，陪您完成這次閱讀。</p>
                     <div className="confirmation-actions">
                       <button
                         type="button"
@@ -375,8 +371,8 @@ export function TarotExperience() {
                   <span /><span /><span />
                 </div>
                 <p className="eyebrow">SHUFFLING</p>
-                <h2>正在整理牌序…</h2>
-                <p>抽牌結果會在這一步固定，後續解讀與重試都不會改變。</p>
+                <h2>正在為這次問題洗牌…</h2>
+                <p>稍後抽出的三張牌，會陪您展開這次閱讀。</p>
               </div>
             )}
 
@@ -386,7 +382,7 @@ export function TarotExperience() {
                   <div>
                     <p className="eyebrow">YOUR THREE CARDS</p>
                     <h2 id="cards-title">
-                      {revealedCount < 3 ? "依序翻開三張牌" : "三張牌已經就位"}
+                      {revealedCount < 3 ? "依序翻開這次的三張牌" : "三張牌已經抽出。"}
                     </h2>
                   </div>
                   <div className="step-actions">
@@ -424,7 +420,7 @@ export function TarotExperience() {
                     <span className="generation-pulse" aria-hidden="true" />
                     <div>
                       <strong>正在整理三張牌的關係…</strong>
-                      <p>AI 正在依照固定牌面生成完整解讀。</p>
+                      <p>解讀會沿用這次的牌面，不會重新抽牌。</p>
                     </div>
                   </div>
                 )}
@@ -440,7 +436,7 @@ export function TarotExperience() {
                       className="button secondary"
                       onClick={retryReading}
                     >
-                      使用原牌重新解讀
+                      用原本的牌再試一次
                     </button>
                   </div>
                 )}
@@ -462,20 +458,25 @@ export function TarotExperience() {
       <section className="how-it-works" id="how-it-works">
         <div>
           <p className="eyebrow">HOW IT WORKS</p>
-          <h2>不是預言，而是一種結構化的觀看方式。</h2>
+          <h2>不是尋找答案，而是換一個角度整理當下。</h2>
         </div>
         <ol>
-          <li><span>01</span><strong>提出問題</strong><p>把注意力放在真正想釐清的情境。</p></li>
-          <li><span>02</span><strong>抽取三張牌</strong><p>牌面與正逆位只產生一次，立即固定。</p></li>
-          <li><span>03</span><strong>AI 整理解讀</strong><p>結合牌義、牌位與問題，形成連貫觀點。</p></li>
+          <li><span>01</span><strong>提出問題</strong><p>把注意力放在此刻真正想釐清的事情。</p></li>
+          <li><span>02</span><strong>抽取三張牌</strong><p>三張牌與正逆位會在抽取後固定，陪您展開這次閱讀。</p></li>
+          <li><span>03</span><strong>展開解讀</strong><p>從牌義、位置與問題之間，整理出新的線索與思考角度。</p></li>
         </ol>
       </section>
 
       <aside className="disclaimer">
         <span aria-hidden="true">i</span>
-        <p>
-          本體驗以 AI 與塔羅牌義提供反思與娛樂用途，不應作為醫療、法律、投資或重大人生決策的唯一依據。問題只保存在目前瀏覽器；送出解讀時會傳至 OpenAI API 處理，不會存入本站資料庫。
-        </p>
+        <div>
+          <p>
+            這是一個以 AI 與塔羅牌義為基礎的互動反思體驗，適合用來整理想法與探索不同角度；不應作為醫療、法律、投資或重大人生決策的唯一依據。
+          </p>
+          <p>
+            您的問題只保留在目前瀏覽器中；產生解讀時會傳送至 AI 服務處理，本站不會建立個人帳號，也不會在伺服器保存閱讀紀錄。
+          </p>
+        </div>
       </aside>
 
       <span className="sr-only" aria-live="polite">

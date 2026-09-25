@@ -7,7 +7,7 @@ export function Navbar() {
         </span>
         <span>
           <strong>AI Tarot</strong>
-          <small>Interactive Reflection</small>
+          <small>A Timeflow Experience</small>
         </span>
       </a>
       <nav aria-label="主要導覽">
