@@ -1346,16 +1346,12 @@ button:disabled {
   gap: 14px;
 }
 
-.timeflow-symbol {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--line-strong);
-  border-radius: 11px;
-  color: var(--ice);
-  font-family: Georgia, "Noto Serif TC", serif;
-  font-size: 15px;
+.timeflow-logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 7px 16px rgba(120, 190, 255, 0.16));
 }
 
 .footer-brand strong {

@@ -1,10 +1,17 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <span className="timeflow-symbol" aria-hidden="true">
-          時
-        </span>
+        <Image
+          className="timeflow-logo"
+          src="/timeflow-logo.png"
+          alt=""
+          width={48}
+          height={48}
+          aria-hidden="true"
+        />
         <div>
           <strong>Timeflow 時序</strong>
           <p>預約與數位營運系統</p>
