@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 
-const siteUrl = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL || "https://ai-tarot.timeflow.tw",
-);
+const siteUrl = new URL("https://ai-tarot.timeflow.tw");
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,

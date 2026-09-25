@@ -82,7 +82,6 @@ OPENAI_API_KEY=replace-with-a-server-side-key
 
 ```bash
 OPENAI_MODEL=gpt-5.4-mini
-NEXT_PUBLIC_SITE_URL=https://ai-tarot.timeflow.tw
 ```
 
 `OPENAI_API_KEY` 僅由 server route 讀取，不可改成 `NEXT_PUBLIC_*`。若本機沒有 key，首頁仍可載入與抽牌，AI route 會回傳不含 stack trace 的安全錯誤。
