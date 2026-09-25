@@ -63,7 +63,7 @@ meaningUpright, meaningReversed, reflection, image, legacyImage
 
 ## Local development
 
-需求：Node.js 20.9 以上。
+需求：Node.js 24。
 
 ```bash
 npm install
