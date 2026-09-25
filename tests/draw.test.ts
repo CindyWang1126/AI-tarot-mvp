@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { drawThreeCards } from "@/lib/reading";
+import { createSelectionDeck, drawThreeCards } from "@/lib/reading";
 
 describe("drawThreeCards", () => {
   it("draws exactly three unique cards with independently selected orientations", () => {
@@ -29,6 +29,31 @@ describe("drawThreeCards", () => {
 
   it("rejects a deck with fewer than three cards", () => {
     expect(() => drawThreeCards(["a", "b"], () => 0)).toThrow(
+      "At least three cards are required.",
+    );
+  });
+});
+
+describe("createSelectionDeck", () => {
+  it("keeps every canonical candidate available exactly once", () => {
+    const source = ["a", "b", "c", "d", "e"];
+    const values = [0, 1, 0, 1, 0, 1, 0, 1, 0];
+    let cursor = 0;
+    const deck = createSelectionDeck(
+      source,
+      (maxExclusive) => values[cursor++] % maxExclusive,
+    );
+
+    expect(deck).toHaveLength(source.length);
+    expect(new Set(deck.map((card) => card.cardId))).toEqual(new Set(source));
+    expect(deck.every((card) => ["upright", "reversed"].includes(card.orientation))).toBe(
+      true,
+    );
+    expect(source).toEqual(["a", "b", "c", "d", "e"]);
+  });
+
+  it("rejects a deck with fewer than three cards", () => {
+    expect(() => createSelectionDeck(["a", "b"], () => 0)).toThrow(
       "At least three cards are required.",
     );
   });

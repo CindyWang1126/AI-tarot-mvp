@@ -11,7 +11,7 @@
 ## 核心體驗
 
 1. 輸入問題並選擇感情、工作、財務、人際或一般類別。
-2. 確認問題後，以 Web Crypto 產生三張不重複的牌與獨立正逆位。
+2. 確認問題後，以 Web Crypto 洗好完整 78 張候選牌與獨立正逆位，再由使用者從牌背牌庫親手選出三張。
 3. 依序翻開「背景／過去影響」、「現況／核心能量」、「建議／發展方向」。
 4. AI 逐牌解讀，再整理三牌關係、整體解讀、行動建議與一個反思問題。
 5. 當次 reading 保存於瀏覽器；重新整理與 AI retry 都沿用相同牌組。
@@ -28,7 +28,7 @@
 
 ```text
 Browser
-  ├─ Web Crypto：只執行一次的抽牌與正逆位
+  ├─ Web Crypto：只執行一次的 78 張牌庫洗牌與正逆位
   ├─ localStorage：版本化 reading persistence
   └─ POST /api/readings（只傳 question/category/readingId/card IDs/orientation）
          ├─ Zod request validation

@@ -52,14 +52,6 @@ export function TarotCardVisual({
       >
         <span className="card-inner">
           <span className="card-back" aria-hidden={revealed}>
-            <span className="card-back-frame">
-              <span className="oracle-seal">
-                <span className="oracle-ring" />
-                <span className="oracle-hand" />
-                <span className="oracle-wave" />
-                <span className="oracle-star" />
-              </span>
-            </span>
             <span className="reveal-hint">輕觸揭開</span>
           </span>
           <span className="card-face" aria-hidden={!revealed}>

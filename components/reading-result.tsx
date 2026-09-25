@@ -96,7 +96,7 @@ export function ReadingResult({
 
       <div className="analysis-grid">
         <article className="analysis-panel">
-          <p className="section-label">牌與牌之間</p>
+          <p className="section-label">牌陣關係</p>
           <h3>脈絡、張力與新的線索</h3>
           <p>{reading.result.relationship}</p>
         </article>

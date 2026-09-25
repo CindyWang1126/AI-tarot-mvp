@@ -1,6 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+} from "react";
 import { ReadingResult } from "@/components/reading-result";
 import { TarotCardVisual } from "@/components/tarot-card";
 import { PROMPT_VERSION } from "@/lib/version";
@@ -10,7 +16,7 @@ import {
   ReadingResultSchema,
   categories,
   categoryLabel,
-  drawThreeCards,
+  createSelectionDeck,
   orientationLabel,
   type Category,
   type ReadingResult as ReadingResultData,
@@ -27,6 +33,7 @@ type Phase =
   | "idle"
   | "question_ready"
   | "shuffling"
+  | "selecting"
   | "cards_drawn"
   | "revealing"
   | "generating"
@@ -60,6 +67,8 @@ export function TarotExperience() {
   const [category, setCategory] = useState<Category>("general");
   const [phase, setPhase] = useState<Phase>("idle");
   const [reading, setReading] = useState<StoredReading | null>(null);
+  const [selectionDeck, setSelectionDeck] = useState<StoredReading["cards"]>([]);
+  const [selectedDeckIndices, setSelectedDeckIndices] = useState<number[]>([]);
   const [revealedCount, setRevealedCount] = useState(0);
   const [errorMessage, setErrorMessage] = useState("");
   const [copied, setCopied] = useState(false);
@@ -149,6 +158,36 @@ export function TarotExperience() {
     return () => window.clearTimeout(timer);
   }, [phase, reading, requestReading, revealedCount]);
 
+  useEffect(() => {
+    if (
+      phase !== "selecting" ||
+      selectedDeckIndices.length !== 3 ||
+      selectionDeck.length !== tarotCardIds.length
+    ) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      const nextReading: StoredReading = {
+        version: READING_VERSION,
+        readingId: crypto.randomUUID(),
+        question: question.trim(),
+        category,
+        cards: selectedDeckIndices.map((index) => selectionDeck[index]),
+        createdAt: new Date().toISOString(),
+        promptVersion: PROMPT_VERSION,
+        result: null,
+      };
+
+      setReading(nextReading);
+      setRevealedCount(0);
+      setPhase("cards_drawn");
+      writeStoredReading(window.localStorage, nextReading);
+    }, 700);
+
+    return () => window.clearTimeout(timer);
+  }, [category, phase, question, selectedDeckIndices, selectionDeck]);
+
   function prepareQuestion() {
     const normalizedQuestion = question.trim();
     if (!normalizedQuestion) {
@@ -160,27 +199,22 @@ export function TarotExperience() {
     setPhase("question_ready");
   }
 
-  async function drawCards() {
+  async function prepareDeckSelection() {
     if (phase === "shuffling") return;
     setPhase("shuffling");
     setErrorMessage("");
     await new Promise((resolve) => window.setTimeout(resolve, 900));
 
-    const nextReading: StoredReading = {
-      version: READING_VERSION,
-      readingId: crypto.randomUUID(),
-      question: question.trim(),
-      category,
-      cards: drawThreeCards(tarotCardIds),
-      createdAt: new Date().toISOString(),
-      promptVersion: PROMPT_VERSION,
-      result: null,
-    };
+    setSelectionDeck(createSelectionDeck(tarotCardIds));
+    setSelectedDeckIndices([]);
+    setPhase("selecting");
+  }
 
-    setReading(nextReading);
-    setRevealedCount(0);
-    setPhase("cards_drawn");
-    writeStoredReading(window.localStorage, nextReading);
+  function selectDeckCard(index: number) {
+    if (phase !== "selecting" || selectedDeckIndices.length >= 3) return;
+    setSelectedDeckIndices((current) =>
+      current.includes(index) ? current : [...current, index],
+    );
   }
 
   function revealCard(index: number) {
@@ -200,6 +234,8 @@ export function TarotExperience() {
     setQuestion("");
     setCategory("general");
     setReading(null);
+    setSelectionDeck([]);
+    setSelectedDeckIndices([]);
     setRevealedCount(0);
     setErrorMessage("");
     setCopied(false);
@@ -271,18 +307,9 @@ export function TarotExperience() {
           <div className="hero-flow flow-b" />
           <div className="hero-orbit orbit-a" />
           <div className="hero-orbit orbit-b" />
-          <div className="hero-card hero-card-left">
-            <span className="hero-card-seal" />
-            <span className="hero-card-index">Ⅰ</span>
-          </div>
-          <div className="hero-card hero-card-center">
-            <span className="hero-card-seal" />
-            <span className="hero-card-index">Ⅱ</span>
-          </div>
-          <div className="hero-card hero-card-right">
-            <span className="hero-card-seal" />
-            <span className="hero-card-index">Ⅲ</span>
-          </div>
+          <div className="hero-card hero-card-left" />
+          <div className="hero-card hero-card-center" />
+          <div className="hero-card hero-card-right" />
         </div>
       </section>
 
@@ -367,9 +394,9 @@ export function TarotExperience() {
                       <button
                         type="button"
                         className="button primary"
-                        onClick={() => void drawCards()}
+                        onClick={() => void prepareDeckSelection()}
                       >
-                        開始抽牌 <span aria-hidden="true">→</span>
+                        展開牌庫 <span aria-hidden="true">→</span>
                       </button>
                     </div>
                   </div>
@@ -386,6 +413,79 @@ export function TarotExperience() {
                 <h2>正在為這次問題洗牌…</h2>
                 <p>三張牌與正逆位將在抽出後固定。</p>
               </div>
+            )}
+
+            {phase === "selecting" && (
+              <section className="deck-selection-stage" aria-labelledby="deck-selection-title">
+                <div className="panel-heading deck-selection-heading">
+                  <div>
+                    <p className="eyebrow">CHOOSE YOUR CARDS</p>
+                    <h2 id="deck-selection-title">從牌庫中，親手選出三張牌。</h2>
+                  </div>
+                  <span className="step-indicator">02 / 03</span>
+                </div>
+                <p className="deck-selection-copy">
+                  牌面仍然隱藏。憑第一眼的感覺，從半圓牌庫依序點選三張。
+                </p>
+                <div
+                  className="deck-fan"
+                  role="group"
+                  aria-label={`78 張牌庫，已選 ${selectedDeckIndices.length} 張`}
+                >
+                  {selectionDeck.map((_, index) => {
+                    const angle = -66 + (132 * index) / (selectionDeck.length - 1);
+                    const radians = (angle * Math.PI) / 180;
+                    const mobileAngle =
+                      -70 + (140 * index) / (selectionDeck.length - 1);
+                    const mobileRadians = (mobileAngle * Math.PI) / 180;
+                    const selectedOrder = selectedDeckIndices.indexOf(index);
+                    return (
+                      <button
+                        key={index}
+                        type="button"
+                        className={`deck-fan-card ${
+                          selectedOrder >= 0 ? "is-selected" : ""
+                        }`}
+                        style={
+                          {
+                            "--fan-rotation": `${angle * 0.72}deg`,
+                            "--fan-left": `${50 + Math.sin(radians) * 42}%`,
+                            "--fan-top": `${72 - Math.cos(radians) * 52}%`,
+                            "--fan-mobile-rotation": `${90 + mobileAngle * 0.72}deg`,
+                            "--fan-mobile-left": `${16 + Math.cos(mobileRadians) * 62}%`,
+                            "--fan-mobile-top": `${50 + Math.sin(mobileRadians) * 38}%`,
+                            "--fan-index": index,
+                          } as CSSProperties
+                        }
+                        onClick={() => selectDeckCard(index)}
+                        disabled={selectedOrder >= 0 || selectedDeckIndices.length >= 3}
+                        aria-label={
+                          selectedOrder >= 0
+                            ? `第 ${selectedOrder + 1} 張已選取`
+                            : `選擇牌庫中的第 ${index + 1} 張牌`
+                        }
+                      >
+                        <span aria-hidden="true" />
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="deck-selection-progress" aria-live="polite">
+                  {[0, 1, 2].map((index) => (
+                    <span
+                      className={index < selectedDeckIndices.length ? "is-filled" : ""}
+                      key={index}
+                    >
+                      {index < selectedDeckIndices.length ? "✦" : `0${index + 1}`}
+                    </span>
+                  ))}
+                  <p>
+                    {selectedDeckIndices.length < 3
+                      ? `再選 ${3 - selectedDeckIndices.length} 張`
+                      : "三張牌已選定，正在為您展開…"}
+                  </p>
+                </div>
+              </section>
             )}
 
             {isReadingVisible && reading && (

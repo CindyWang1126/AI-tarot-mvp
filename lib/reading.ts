@@ -143,6 +143,29 @@ export function drawThreeCards(
   return drawn;
 }
 
+export function createSelectionDeck(
+  cardIds: readonly string[],
+  randomInt: (maxExclusive: number) => number = secureRandomInt,
+): DrawnCard[] {
+  if (cardIds.length < 3) {
+    throw new Error("At least three cards are required.");
+  }
+
+  const shuffledIds = [...cardIds];
+  for (let index = shuffledIds.length - 1; index > 0; index -= 1) {
+    const selectedIndex = randomInt(index + 1);
+    [shuffledIds[index], shuffledIds[selectedIndex]] = [
+      shuffledIds[selectedIndex],
+      shuffledIds[index],
+    ];
+  }
+
+  return shuffledIds.map((cardId) => ({
+    cardId,
+    orientation: randomInt(2) === 0 ? "upright" : "reversed",
+  }));
+}
+
 export function categoryLabel(category: Category): string {
   return categories.find((item) => item.value === category)?.label ?? "一般";
 }

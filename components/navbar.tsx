@@ -1,10 +1,17 @@
+import Image from "next/image";
+
 export function Navbar() {
   return (
     <header className="site-nav">
       <a className="brand-lockup" href="#top" aria-label="AI Tarot 首頁">
-        <span className="brand-mark" aria-hidden="true">
-          <span />
-        </span>
+        <Image
+          className="brand-logo"
+          src="/timeflow-logo.png"
+          alt=""
+          width={256}
+          height={256}
+          priority
+        />
         <span>
           <strong>AI Tarot</strong>
           <small>A Timeflow Experience</small>
