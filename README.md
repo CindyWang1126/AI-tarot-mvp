@@ -2,7 +2,9 @@
 
 **LLM × Structured Knowledge Prototype by Timeflow**
 
-[Production：ai-tarot.timeflow.tw](https://ai-tarot.timeflow.tw)
+[Production：timeflow-ai-tarot.vercel.app](https://timeflow-ai-tarot.vercel.app)
+
+Planned custom domain: `ai-tarot.timeflow.tw`（等待 DNS CNAME 設定）
 
 一個以三張牌陣為核心的匿名互動式反思體驗。使用者提出問題後，系統會固定抽出三張不重複的牌與正逆位，再由伺服器端 AI 結合可信的結構化牌義、牌位與問題脈絡產生繁體中文解讀。
 
