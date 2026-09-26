@@ -436,7 +436,7 @@ export function TarotExperience() {
                     const angle = -66 + (132 * index) / (selectionDeck.length - 1);
                     const radians = (angle * Math.PI) / 180;
                     const mobileAngle =
-                      -64 + (128 * index) / (selectionDeck.length - 1);
+                      -86 + (172 * index) / (selectionDeck.length - 1);
                     const mobileRadians = (mobileAngle * Math.PI) / 180;
                     const selectedOrder = selectedDeckIndices.indexOf(index);
                     return (
@@ -451,9 +451,9 @@ export function TarotExperience() {
                             "--fan-rotation": `${angle * 0.72}deg`,
                             "--fan-left": `${50 + Math.sin(radians) * 42}%`,
                             "--fan-top": `${72 - Math.cos(radians) * 52}%`,
-                            "--fan-mobile-rotation": `${90 + mobileAngle * 0.72}deg`,
-                            "--fan-mobile-left": `${17 + Math.cos(mobileRadians) * 61}%`,
-                            "--fan-mobile-top": `${49 + Math.sin(mobileRadians) * 31}%`,
+                            "--fan-mobile-rotation": `${90 + mobileAngle * 0.82}deg`,
+                            "--fan-mobile-left": `${3 + Math.cos(mobileRadians) * 75}%`,
+                            "--fan-mobile-top": `${50 + Math.sin(mobileRadians) * 43}%`,
                             "--fan-index": index,
                           } as CSSProperties
                         }

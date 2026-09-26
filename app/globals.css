@@ -1092,7 +1092,7 @@ button:disabled {
 
 .tarot-card {
   width: min(100%, 245px);
-  aspect-ratio: 0.575;
+  aspect-ratio: 2 / 3;
   display: block;
   margin-inline: auto;
   padding: 0;
@@ -2229,7 +2229,7 @@ button:disabled {
   }
 
   .deck-selection-stage {
-    min-height: 900px;
+    min-height: 1000px;
     padding: 34px 22px 32px;
     border-color: rgba(190, 198, 220, 0.24);
     border-radius: 26px;
@@ -2297,7 +2297,7 @@ button:disabled {
 
   .deck-fan {
     width: 100%;
-    height: 470px;
+    height: 560px;
     margin: 20px auto 0;
     isolation: isolate;
   }
@@ -2307,16 +2307,16 @@ button:disabled {
     content: "";
     position: absolute;
     z-index: -1;
-    left: 17%;
-    top: 49%;
+    left: 3%;
+    top: 50%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
   }
 
   .deck-fan::before {
-    width: 122%;
-    height: 62%;
+    width: 150%;
+    height: 85.714%;
     border: 1px solid rgba(229, 187, 111, 0.2);
     box-shadow:
       0 0 0 38px rgba(87, 155, 197, 0.018),
@@ -2324,13 +2324,14 @@ button:disabled {
   }
 
   .deck-fan::after {
-    width: 96%;
-    height: 50%;
+    width: 124%;
+    height: 70.857%;
     border: 1px solid rgba(150, 201, 225, 0.08);
   }
 
   .deck-fan-card {
-    width: 54px;
+    width: 60px;
+    aspect-ratio: 2 / 3;
     top: var(--fan-mobile-top);
     left: var(--fan-mobile-left);
     transform: translate(-50%, -50%) rotate(var(--fan-mobile-rotation));
@@ -2356,7 +2357,8 @@ button:disabled {
     display: grid;
     grid-template-columns: repeat(3, 46px);
     gap: 16px;
-    margin-top: 28px;
+    margin-top: 78px;
+    transform: translateX(-14px);
   }
 
   .deck-selection-progress > span {
